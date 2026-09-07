@@ -1,0 +1,7 @@
+El objetivo de sim es : de cara al final
+
+sim/
+├── filelist.f
+├── run.do
+├── Makefile
+└── test_fixture.sv

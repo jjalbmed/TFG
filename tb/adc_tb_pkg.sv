@@ -10,5 +10,9 @@ package adc_tb_pkg;
     `include "agent/adc_driver.sv"
     `include "agent/adc_monitor.sv"
     `include "agent/adc_agent.sv"
+
+    `include "env/adc_env.sv"
+
+    `include "/home/jalberic/proyectos/TFG/tests/adc_base_test.sv"
     
 endpackage    

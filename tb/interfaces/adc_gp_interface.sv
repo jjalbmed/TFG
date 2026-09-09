@@ -5,7 +5,7 @@ interface gp_adc_interface;
 
 
 modport driver (
-    output clk,
+    input clk, //el driver no genera el clk
     output set,
     output d,
     output reset

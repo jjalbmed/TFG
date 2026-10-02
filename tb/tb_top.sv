@@ -15,9 +15,9 @@ module tb_top(gp_adc_interface intf);
         uvm_config_db#(virtual gp_adc_interface.driver)::set(null,"uvm_test_top.env.agent.driver","vif",intf.driver);
 
         uvm_config_db#(virtual gp_adc_interface.monitor)::set(null,"uvm_test_top.env.agent.monitor","vif",intf.monitor);
+
+        run_test(); //a efectos prácticos es un método. Hace falta para desde la barra de comandos, indicar que test simular.
+
     end
-
-
-    run_test(); //a efectos prácticos es un método. Hace falta para desde la barra de comandos, indicar que test simular.
 
 endmodule

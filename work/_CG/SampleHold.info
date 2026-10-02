@@ -1,0 +1,13 @@
+[VERILOG-AMS Module]
+NAME = SampleHold 
+SOURCE = /home/jalberic/proyectos/TFG/dut/SampleHold.va 
+LINE = 4
+[Generics]
+( vtrans   real  5.000000e-01  )
+( delay   integer  0  )
+( trans_time   real  1.000000e-12  )
+( clk_threshold   real  9.000000e-01  )
+[Ports]
+(PORT TERMINAL clk IN electrical)
+(PORT TERMINAL vin IN electrical)
+(PORT TERMINAL vout OUT electrical)

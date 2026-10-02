@@ -1,0 +1,18 @@
+START report: Fri Oct  2 20:11:58 2026 
+** Note: (vasim-3800) Running Questa ADMS 2026.1 update1 Fri Mar 13 07:49:54 GMT 2026
++   on JOSE Linux x86_64(6.18.33.2-microsoft-standard-WSL2) #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026
+Loading "/eda/SolidoSimulationSuite/solidosim/solidosim/libs/std.standard"
+Loading "/eda/SolidoSimulationSuite/solidosim/solidosim/libs/ieee.std_logic_1164"
+Loading "/home/jalberic/proyectos/TFG/work.SampleHold"
+Loading "/home/jalberic/proyectos/TFG/work.Comparador"
+Loading "/home/jalberic/proyectos/TFG/work.DAC_Capacitivo"
+Loading "/home/jalberic/proyectos/TFG/work.IdealFlipFlop"
+Loading "/home/jalberic/proyectos/TFG/work.SARCodeRow"
+Loading "/home/jalberic/proyectos/TFG/work.SARSequenceRow"
+Loading "/eda/SolidoSimulationSuite/solidosim/solidosim/libs/MGC_AMS.wreal_pkg"
+** Warning: (eldo-233)  In file "./sim/ms_sample_hold.cmd" line 4:
++   OBJECT "D2A_REAL":  TRISE is not specified. Default value (50 ps) is taken.
+** Warning: (eldo-233)  In file "./sim/ms_sample_hold.cmd" line 4:
++   OBJECT "D2A_REAL":  TFALL is not specified. Default value (50 ps) is taken.
+** Note: (vasim-1308) Converters inserted. See "/home/jalberic/proyectos/TFG/sim/ms_sample_hold.conv" for details
+Load done

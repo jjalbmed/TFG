@@ -7,7 +7,11 @@ class adc_monitor extends uvm_monitor;
 
     uvm_analysis_port #(adc_transaction) ap;
 
-    function new(string name ="adc_monitor", uvm_component parent = "null");
+    // AMS propagation/settling after the sample edge. This is deliberately
+    // separate from clocking-block skews, which only define SV scheduling.
+    localparam time AMS_SETTLING_TIME = 100ps;
+
+    function new(string name ="adc_monitor", uvm_component parent = null);
         super.new(name,parent);
         ap = new("ap",this);
     endfunction
@@ -24,16 +28,24 @@ class adc_monitor extends uvm_monitor;
     task run_phase (uvm_phase phase);
 
         adc_transaction tr;
+        real sampled_vin;
+        real sampled_vout;
 
         forever begin
-            @(posedge vif.clk);
+            // Vin is sampled in the monitor clocking block at this edge.
+            @(vif.monitor_cb);
+            sampled_vin = vif.monitor_cb.vin;
+
+            // Vout is observed only after the distinct AMS settling time.
+            #(AMS_SETTLING_TIME);
+            sampled_vout = vif.vout;
 
             tr = adc_transaction::type_id::create("tr");
             
-            tr.reset = vif.reset;
-            tr.set = vif. set;
-            tr.d = vif.d;
-            tr.q = vif.q;
+            tr.vin = sampled_vin;
+            tr.vout = sampled_vout;
+
+            `uvm_info("MON", $sformatf("ADC vin = %0.3f | ADC vout = %0.3f", tr.vin, tr.vout),UVM_LOW)
 
             ap.write(tr);
         end

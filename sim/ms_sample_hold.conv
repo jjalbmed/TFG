@@ -1,0 +1,576 @@
+NET :test_fixture:dut:sh_vout
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sample_hold:vout, :test_fixture:dut:u_comparador:InS;
+		WAVEFORM NAME :test_fixture:dut:sh_vout
+END NET;
+
+NET :test_fixture:dut:dac_vdd
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_dac:vdd;
+		WAVEFORM NAME :test_fixture:dut:dac_vdd
+END NET;
+
+NET :test_fixture:dut:dac_vss
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_dac:vss;
+		WAVEFORM NAME :test_fixture:dut:dac_vss
+END NET;
+
+NET :test_fixture:dut:ff_vdd
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_ideal_flipflop:VDD;
+		WAVEFORM NAME :test_fixture:dut:ff_vdd
+END NET;
+
+NET :test_fixture:dut:ff_vss
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_ideal_flipflop:VSS;
+		WAVEFORM NAME :test_fixture:dut:ff_vss
+END NET;
+
+NET :test_fixture:dut:sar_vdd
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:VDD;
+		WAVEFORM NAME :test_fixture:dut:sar_vdd
+END NET;
+
+NET :test_fixture:dut:sar_vss
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:VSS;
+		WAVEFORM NAME :test_fixture:dut:sar_vss
+END NET;
+
+NET :test_fixture:dut:sar_seq_vdd
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_sequence_row:VDD;
+		WAVEFORM NAME :test_fixture:dut:sar_seq_vdd
+END NET;
+
+NET :test_fixture:dut:sar_seq_vss
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_sequence_row:VSS;
+		WAVEFORM NAME :test_fixture:dut:sar_seq_vss
+END NET;
+
+NET :test_fixture:adc_clk_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sample_hold:clk, :test_fixture:dut:u_comparador:clk, :test_fixture:dut:u_ideal_flipflop:CLK;
+		WAVEFORM NAME :test_fixture:adc_clk_ams
+END NET;
+
+NET :test_fixture:adc_vin_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sample_hold:vin;
+		WAVEFORM NAME :test_fixture:adc_vin_ams
+END NET;
+
+NET :test_fixture:adc_dac_out_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_comparador:InD, :test_fixture:dut:u_dac:Aout;
+		WAVEFORM NAME :test_fixture:adc_dac_out_ams
+END NET;
+
+NET :test_fixture:adc_cmp_out_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_comparador:Out;
+		WAVEFORM NAME :test_fixture:adc_cmp_out_ams
+END NET;
+
+NET :test_fixture:adc_dac_b0_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_dac:b0;
+		WAVEFORM NAME :test_fixture:adc_dac_b0_ams
+END NET;
+
+NET :test_fixture:adc_dac_b1_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_dac:b1;
+		WAVEFORM NAME :test_fixture:adc_dac_b1_ams
+END NET;
+
+NET :test_fixture:adc_dac_b2_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_dac:b2;
+		WAVEFORM NAME :test_fixture:adc_dac_b2_ams
+END NET;
+
+NET :test_fixture:adc_dac_b3_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_dac:b3;
+		WAVEFORM NAME :test_fixture:adc_dac_b3_ams
+END NET;
+
+NET :test_fixture:adc_dac_b4_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_dac:b4;
+		WAVEFORM NAME :test_fixture:adc_dac_b4_ams
+END NET;
+
+NET :test_fixture:adc_dac_b5_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_dac:b5;
+		WAVEFORM NAME :test_fixture:adc_dac_b5_ams
+END NET;
+
+NET :test_fixture:adc_dac_b6_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_dac:b6;
+		WAVEFORM NAME :test_fixture:adc_dac_b6_ams
+END NET;
+
+NET :test_fixture:adc_dac_b7_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_dac:b7;
+		WAVEFORM NAME :test_fixture:adc_dac_b7_ams
+END NET;
+
+NET :test_fixture:adc_ff_set_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_ideal_flipflop:Set;
+		WAVEFORM NAME :test_fixture:adc_ff_set_ams
+END NET;
+
+NET :test_fixture:adc_ff_reset_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_ideal_flipflop:Reset;
+		WAVEFORM NAME :test_fixture:adc_ff_reset_ams
+END NET;
+
+NET :test_fixture:adc_ff_d_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_ideal_flipflop:D;
+		WAVEFORM NAME :test_fixture:adc_ff_d_ams
+END NET;
+
+NET :test_fixture:adc_ff_q_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_ideal_flipflop:Q;
+		WAVEFORM NAME :test_fixture:adc_ff_q_ams
+END NET;
+
+NET :test_fixture:adc_ff_qbar_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_ideal_flipflop:QBAR;
+		WAVEFORM NAME :test_fixture:adc_ff_qbar_ams
+END NET;
+
+NET :test_fixture:adc_sar_in_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:In;
+		WAVEFORM NAME :test_fixture:adc_sar_in_ams
+END NET;
+
+NET :test_fixture:adc_sar_reset_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:Reset;
+		WAVEFORM NAME :test_fixture:adc_sar_reset_ams
+END NET;
+
+NET :test_fixture:adc_sar_seq_b7_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:seq_b7;
+		WAVEFORM NAME :test_fixture:adc_sar_seq_b7_ams
+END NET;
+
+NET :test_fixture:adc_sar_seq_b6_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:seq_b6;
+		WAVEFORM NAME :test_fixture:adc_sar_seq_b6_ams
+END NET;
+
+NET :test_fixture:adc_sar_seq_b5_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:seq_b5;
+		WAVEFORM NAME :test_fixture:adc_sar_seq_b5_ams
+END NET;
+
+NET :test_fixture:adc_sar_seq_b4_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:seq_b4;
+		WAVEFORM NAME :test_fixture:adc_sar_seq_b4_ams
+END NET;
+
+NET :test_fixture:adc_sar_seq_b3_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:seq_b3;
+		WAVEFORM NAME :test_fixture:adc_sar_seq_b3_ams
+END NET;
+
+NET :test_fixture:adc_sar_seq_b2_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:seq_b2;
+		WAVEFORM NAME :test_fixture:adc_sar_seq_b2_ams
+END NET;
+
+NET :test_fixture:adc_sar_seq_b1_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:seq_b1;
+		WAVEFORM NAME :test_fixture:adc_sar_seq_b1_ams
+END NET;
+
+NET :test_fixture:adc_sar_seq_b0_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:seq_b0;
+		WAVEFORM NAME :test_fixture:adc_sar_seq_b0_ams
+END NET;
+
+NET :test_fixture:adc_sar_register_clk_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:register_clk;
+		WAVEFORM NAME :test_fixture:adc_sar_register_clk_ams
+END NET;
+
+NET :test_fixture:adc_sar_b7_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:b7;
+		WAVEFORM NAME :test_fixture:adc_sar_b7_ams
+END NET;
+
+NET :test_fixture:adc_sar_b6_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:b6;
+		WAVEFORM NAME :test_fixture:adc_sar_b6_ams
+END NET;
+
+NET :test_fixture:adc_sar_b5_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:b5;
+		WAVEFORM NAME :test_fixture:adc_sar_b5_ams
+END NET;
+
+NET :test_fixture:adc_sar_b4_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:b4;
+		WAVEFORM NAME :test_fixture:adc_sar_b4_ams
+END NET;
+
+NET :test_fixture:adc_sar_b3_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:b3;
+		WAVEFORM NAME :test_fixture:adc_sar_b3_ams
+END NET;
+
+NET :test_fixture:adc_sar_b2_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:b2;
+		WAVEFORM NAME :test_fixture:adc_sar_b2_ams
+END NET;
+
+NET :test_fixture:adc_sar_b1_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:b1;
+		WAVEFORM NAME :test_fixture:adc_sar_b1_ams
+END NET;
+
+NET :test_fixture:adc_sar_b0_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:b0;
+		WAVEFORM NAME :test_fixture:adc_sar_b0_ams
+END NET;
+
+NET :test_fixture:adc_sar_b7b_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:b7b;
+		WAVEFORM NAME :test_fixture:adc_sar_b7b_ams
+END NET;
+
+NET :test_fixture:adc_sar_b6b_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:b6b;
+		WAVEFORM NAME :test_fixture:adc_sar_b6b_ams
+END NET;
+
+NET :test_fixture:adc_sar_b5b_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:b5b;
+		WAVEFORM NAME :test_fixture:adc_sar_b5b_ams
+END NET;
+
+NET :test_fixture:adc_sar_b4b_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:b4b;
+		WAVEFORM NAME :test_fixture:adc_sar_b4b_ams
+END NET;
+
+NET :test_fixture:adc_sar_b3b_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:b3b;
+		WAVEFORM NAME :test_fixture:adc_sar_b3b_ams
+END NET;
+
+NET :test_fixture:adc_sar_b2b_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:b2b;
+		WAVEFORM NAME :test_fixture:adc_sar_b2b_ams
+END NET;
+
+NET :test_fixture:adc_sar_b1b_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:b1b;
+		WAVEFORM NAME :test_fixture:adc_sar_b1b_ams
+END NET;
+
+NET :test_fixture:adc_sar_b0b_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_code_row:b0b;
+		WAVEFORM NAME :test_fixture:adc_sar_b0b_ams
+END NET;
+
+NET :test_fixture:adc_sar_seq_reset_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_sequence_row:Reset;
+		WAVEFORM NAME :test_fixture:adc_sar_seq_reset_ams
+END NET;
+
+NET :test_fixture:adc_sar_seq_clk_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_sequence_row:CLK;
+		WAVEFORM NAME :test_fixture:adc_sar_seq_clk_ams
+END NET;
+
+NET :test_fixture:adc_sar_auto_seq_b7_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_sequence_row:seq_b7;
+		WAVEFORM NAME :test_fixture:adc_sar_auto_seq_b7_ams
+END NET;
+
+NET :test_fixture:adc_sar_auto_seq_b6_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_sequence_row:seq_b6;
+		WAVEFORM NAME :test_fixture:adc_sar_auto_seq_b6_ams
+END NET;
+
+NET :test_fixture:adc_sar_auto_seq_b5_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_sequence_row:seq_b5;
+		WAVEFORM NAME :test_fixture:adc_sar_auto_seq_b5_ams
+END NET;
+
+NET :test_fixture:adc_sar_auto_seq_b4_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_sequence_row:seq_b4;
+		WAVEFORM NAME :test_fixture:adc_sar_auto_seq_b4_ams
+END NET;
+
+NET :test_fixture:adc_sar_auto_seq_b3_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_sequence_row:seq_b3;
+		WAVEFORM NAME :test_fixture:adc_sar_auto_seq_b3_ams
+END NET;
+
+NET :test_fixture:adc_sar_auto_seq_b2_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_sequence_row:seq_b2;
+		WAVEFORM NAME :test_fixture:adc_sar_auto_seq_b2_ams
+END NET;
+
+NET :test_fixture:adc_sar_auto_seq_b1_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_sequence_row:seq_b1;
+		WAVEFORM NAME :test_fixture:adc_sar_auto_seq_b1_ams
+END NET;
+
+NET :test_fixture:adc_sar_auto_seq_b0_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_sequence_row:seq_b0;
+		WAVEFORM NAME :test_fixture:adc_sar_auto_seq_b0_ams
+END NET;
+
+NET :test_fixture:adc_sar_auto_register_clk_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:u_sar_sequence_row:register_clk;
+		WAVEFORM NAME :test_fixture:adc_sar_auto_register_clk_ams
+END NET;
+

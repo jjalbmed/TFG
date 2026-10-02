@@ -1,0 +1,53 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+module DAC_Capacitivo(
+    b0, b1, b2, b3, b4, b5, b6, b7,
+    Aout,
+    vdd,
+    vss
+);
+
+    parameter real vtrans = 0.9;
+    parameter real delay = 0;
+    parameter real trans_time = 1p;
+
+    input b0, b1, b2, b3, b4, b5, b6, b7, vdd, vss;
+    output Aout;
+
+    electrical b0, b1, b2, b3, b4, b5, b6, b7;
+    electrical Aout, vdd, vss;
+
+    real b_0, b_1, b_2, b_3;
+    real b_4, b_5, b_6, b_7;
+    real result;
+
+    analog begin
+
+        b_0 = (V(b0) > vtrans) ? 1 : 0;
+        b_1 = (V(b1) > vtrans) ? 1 : 0;
+        b_2 = (V(b2) > vtrans) ? 1 : 0;
+        b_3 = (V(b3) > vtrans) ? 1 : 0;
+        b_4 = (V(b4) > vtrans) ? 1 : 0;
+        b_5 = (V(b5) > vtrans) ? 1 : 0;
+        b_6 = (V(b6) > vtrans) ? 1 : 0;
+        b_7 = (V(b7) > vtrans) ? 1 : 0;
+
+        result =
+            (
+                b_0 * 1   +
+                b_1 * 2   +
+                b_2 * 4   +
+                b_3 * 8   +
+                b_4 * 16  +
+                b_5 * 32  +
+                b_6 * 64  +
+                b_7 * 128
+            )
+            * (V(vdd) / 256);
+
+        V(Aout) <+ transition(result, delay, trans_time);
+
+    end
+
+endmodule

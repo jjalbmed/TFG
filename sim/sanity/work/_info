@@ -1,0 +1,54 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2026.1_1 2026.03, Mar  2 2026
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/jalberic/proyectos/TFG/sim/sanity
+T_opt
+!i145 1
+!i144 0
+!s110 1789398952
+VM]>c9ondLT^WcegElUYHB1
+04 9 4 work real_test fast 0
+=1-00155df0ccb6-6aa80fa7-d2b0d-322
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM100
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2026.1_1;84
+vreal_test
+2real_number_test.sv
+DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+!s110 1789398935
+!i10b 1
+!s100 K;HB5EPUXLh@c^R4`fD1O1
+IXzb7ekfKI@nKER<GGePG82
+S1
+R1
+w1789398115
+8real_number_test.sv
+Freal_number_test.sv
+!i122 0
+L0 3 52
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2026.1_1;84
+r1
+!s85 0
+31
+!s108 1789398935.000000
+!s107 real_number_test.sv|
+!s90 -sv|real_number_test.sv|
+!i113 0
+o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2

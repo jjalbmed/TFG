@@ -1,0 +1,13 @@
+[VERILOG-AMS Module]
+NAME = Comparador 
+SOURCE = /home/jalberic/proyectos/TFG/dut/Comparador.va 
+LINE = 5
+[Generics]
+( trans_time   real  1.000000e-12  )
+( ret   integer  0  )
+( clk_threshold   real  9.000000e-01  )
+[Ports]
+(PORT TERMINAL InS IN electrical)
+(PORT TERMINAL InD IN electrical)
+(PORT TERMINAL Out OUT electrical)
+(PORT TERMINAL clk IN electrical)

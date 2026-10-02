@@ -1,0 +1,81 @@
+  Run on JOSE (Linux 6.18.33.2-microsoft-standard-WSL2)
+
+
+***** SYSTEM INFORMATION ...
+
+*** User  : jalberic
+*** OS    : Rocky Linux release 8.10 (Green Obsidian) [VCO = aol]
+*** CPU   :
+    12th Gen Intel(R) Core(TM) i5-1235U
+    Number of physical processors     : 1
+    Hyper-Threading Technology        : enabled
+    Number of cpu cores               : 6
+    Number of logical processors      : 12
+*** Freq  : 2495.999MHz
+*** Cache : 12288 KB
+*** MEM   : 8016528 kB
+*** Date  : Mon Sep 14 20:19:31 2026
+
+*** Questa-ADMS VERSION : ELDO 2026.1 update1 (64 bits) Thu Mar 12 16:20:50 GMT 2026
+
+/eda/SolidoSimulationSuite/solidosim/solidosim/aol/bin/vams_ms_64 -i  -noconf -nogwl -cou46 -gwl wdl -nocou -wdb_folder -wdb_incremental -jwdb_design -float -hdla /home/jalberic/proyectos/TFG/work ms_sample_hold_top -hdlav3opt -jwdbport 42649 -jwdbhost JOSE -folder -c -mach -libtop /home/jalberic/proyectos/TFG/work -jwdb_checkpoint 1 -msl transcript_ms
+
+
+***** PRE-PROCESSING ...
+1*******14-Sep-26 *******  ELDO 2026.1 update1 (64 bits)  (v26.1_1.1)  *******20:19:31******
+
+0* Temporary input file
+
+0****     INPUT LISTING                                               
+
+0***********************************************************************
+    2  
+    3  .OPTION noascii be
+    4  .END
+
+End of file 
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+***** GENERATION ...
+
+Warning 107: NODE "CLK": Less than two connections.
+Warning 107: NODE "VIN": Less than two connections.
+Warning 107: NODE "VOUT": Less than two connections.
+Warning 29: Such messages will not be displayed in future. Set .option MSGNODE = 0 to receive all such warnings.
+Warning 1632: No analysis specified. Default to transient analysis.
+
+***** 0  error(s). 
+***** 5  warning(s). 
+
+
+INFORMATION ABOUT COMPILATION 
+
+Peak memory usage (MB): 98
+Virtual memory usage (MB): 749
+1 elements
+3 nodes 
+Detail about objects and nodes found in the design, and simulated by Eldo:
+Number of nodes                     3
+Number of intrinsic nodes           0
+Number of input signals             0
+Number of resistors                 0
+Number of floating capacitors       0
+Number of grounded capacitors       0
+Number of inductors                 0
+Number of voltage sources           0
+Number of current sources           0
+Number of dependent sources         0
+Number of diodes                    0
+Number of BJT                       0
+Number of JFET                      0
+Number of MOS                       0
+Number of SWITCHES                  0
+Number of transmission lines        0
+ADMS devices                        1
+Total number of elements simulated  1
+
+Simulation Finished.

@@ -1,0 +1,407 @@
+  Run on JOSE (Linux 6.18.33.2-microsoft-standard-WSL2)
+
+
+***** SYSTEM INFORMATION ...
+
+*** User  : jalberic
+*** OS    : Rocky Linux release 8.10 (Green Obsidian) [VCO = aol]
+*** CPU   :
+    12th Gen Intel(R) Core(TM) i5-1235U
+    Number of physical processors     : 1
+    Hyper-Threading Technology        : enabled
+    Number of cpu cores               : 6
+    Number of logical processors      : 12
+*** Freq  : 2495.999MHz
+*** Cache : 12288 KB
+*** MEM   : 8016524 kB
+*** Date  : Fri Oct  2 20:11:58 2026
+
+*** Questa-ADMS VERSION : ELDO 2026.1 update1 (64 bits) Thu Mar 12 16:20:50 GMT 2026
+
+/eda/SolidoSimulationSuite/solidosim/solidosim/aol/bin/vams_ms_64 -i /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd -noconf -nogwl -cou46 -gwl wdl -nocou -wdb_folder -wdb_incremental -jwdb_design -float -hdla /home/jalberic/proyectos/TFG/work test_fixture -hdlav3opt -jwdbport 35059 -jwdbhost JOSE -folder -c -mach +UVM_TESTNAME=adc_sar_sequence_row_test -libtop /home/jalberic/proyectos/TFG/work -jwdb_checkpoint 1 -msl transcript_ms
+
+
+***** PRE-PROCESSING ...
+1******* 2-Oct-26 *******  ELDO 2026.1 update1 (64 bits)  (v26.1_1.1)  *******20:11:58******
+
+0* Boundary elements REAL <-> electrical
+
+0****     INPUT LISTING                                               
+
+0***********************************************************************
+    2  
+    3  .MODEL A2D_REAL A2D MODE=REAL
+    4  .MODEL D2A_REAL D2A MODE=REAL
+    5  
+    6  .DEFHOOK a2d_real d2a_real
+    7  
+    8  .PROBE TRAN V
+    9  
+   10  .tran 500ps 1us
+   11  .END
+
+End of file 
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+***** GENERATION ...
+
+Warning 233: In file "./sim/ms_sample_hold.cmd" line 4:
++   OBJECT "D2A_REAL":  TRISE is not specified. Default value (50 ps) is taken.
+Warning 233: In file "./sim/ms_sample_hold.cmd" line 4:
++   OBJECT "D2A_REAL":  TFALL is not specified. Default value (50 ps) is taken.
+
+***** 0  error(s). 
+***** 2  warning(s). 
+
+
+INFORMATION ABOUT COMPILATION 
+
+Peak memory usage (MB): 132
+Virtual memory usage (MB): 749
+24 elements
+75 nodes 
+34 input signals
+1 functional instances
+Detail about objects and nodes found in the design, and simulated by Eldo:
+Number of nodes                     75
+Number of intrinsic nodes           0
+Number of input signals             34
+Number of resistors                 0
+Number of floating capacitors       0
+Number of grounded capacitors       0
+Number of inductors                 0
+Number of voltage sources           0
+Number of current sources           0
+Number of dependent sources         0
+Number of diodes                    0
+Number of BJT                       0
+Number of JFET                      0
+Number of MOS                       0
+Number of SWITCHES                  0
+Number of transmission lines        0
+ADMS devices                        24
+Total number of elements simulated  24
+*** DATE:  2-Oct-2026 20:12:02
+*** TITLE: * Boundary elements REAL <-> electrical
+
+TEMPERATURE : 27.000000 degrees C
+
+
+
+
+1*************** 2-Oct-2026 ***********************  ELDO 2026.1 update1 (64 bits)  (v26.1_1.1)  ***********************20:12:02*****************
+
+0* Boundary elements REAL <-> electrical
+0****                 OPTION SUMMARY                                         TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+
+
+*** DC Control Options : 
+
+GMIN           = 1.00e-12 NMAXSIZE       = 100000   ITL1           = 100      
+GRAMP          = 0        NETSIZE        = 100      VMINDC         = UNDEF    
+VMAXDC         = UNDEF    
+
+*** Initial Accuracy Control Options (May be adjusted during simulation): 
+
+ITOL           = 1.00e-06 EPS            = 5.00e-03 VNTOL          = 1.00e-06 
+RELTOL         = 1.00e-03 RELERR         = 5.00e-02 PIVREL         = 1.00e-03 
+PIVTOL         = 1.00e-16 ABSTOL         = 1.00e-12 FLXTOL         = 1.00e-11 
+MAXORD         = 2.00e+00 
+
+*** Time-step Control Options : 
+
+ZOOMTIME       = 1.00e+00 STEP           = 0.00e+00 STARTSMP       = 0.00e+00 
+FREQSMP        = 0.00e+00 COURESOL       = 0.00e+00 TRTOL          = 7.00e+00 
+HMIN           = 1.00e-12 ITL3           = 3        ITL4           = 13       
+FT             = 1.25e-01 DCLOG          = 1.00e+00 LVLTIM         = 2        
+LVLCNV         = 2        DVDT           = -1       RELVAR         = 1.50e-01 
+ABSVAR         = 2.00e-01 SAMPLE         = 0.00e+00 HMAX           = UNDEF    
+
+
+*** MosFet default Options : 
+
+SCALE          = 1.00e+00 SCALM          = 1.00e+00 SCALEBSIM      = 1.00e+00 
+DEFAD          = UNDEF    DEFAS          = UNDEF    DEFPD          = UNDEF    
+DEFPS          = UNDEF    DEFW           = 1.00e-04 DEFL           = 1.00e-04 
+DEFNRD         = UNDEF    DEFNRS         = UNDEF    XA             = 6.00e-06 
+LIMRMOS        = UNDEF    SHRINK         = 1.00e+00 
+
+*** General Information Options : 
+
+TUNING         = UNDEF    PREMIER_TSTEP_CKT = STD      
+CPTIME         = UNDEF    STAT           = 0        TIMEDIV        = 0        
+SIMUDIV        = 0        SAVETIME       = 0        MAXTRAN        = 1000     
+MAXNODES       = 10000    MAXV           = 1.00e+13 LIMPROBE       = 10000    
+FLICKER_NOISE  = 0        THERMAL_NOISE  = 0        TNOM           = 2.70e+01 
+TMAX           = UNDEF    
+SPICDC         = 0        SPIOUT         = 0        NEWTON         = 1        
+OSR            = 0        TRAP           = 1        GEAR           = 0        
+BE             = 0        PROBEOP        = 0        NOLAT          = 0        
+NWLAT          = 0        ANALOG         = 0        BBDEBUG        = 0        
+NOSIZECHK      = 0        QTRUNC         = 0        UNBOUND        = 0        
+LCAPOP         = 0        NOAEX          = 0        AEX            = 0        
+AEX            = 0        STVER          = 0        MOTOROLA       = 0        
+AMS            = 0        ASPEC          = 0        INPUT          = 0        
+NOINIT         = 0        PSF            = 0        NOBIN          = 0        
+NOCOU          = 1        WL             = 0        NODE           = 0        
+LIST           = 0        SPI3BIN        = 0        SPI3ASC        = 0        
+NOMOD          = 0        NOBIN          = 0        NOCOU          = 1        
+RMOS           = 0        NWRMOS         = 1        NONWRMOS       = 0        
+USEDEFAP       = 0        NOASCII        = 0        ASCII          = 1        
+MIXED          = 0        SWITCH         = 0        USERSWITCH     = 0        
+TIMING         = 0        MODWL          = 1        ULOGIC         = 0        
+
+
+
+    DC cpu Time 0s 010ms 
+DC:1 iterations FOR DC analysis
+
+
+
+
+1*************** 2-Oct-2026 ***********************  ELDO 2026.1 update1 (64 bits)  (v26.1_1.1)  ***********************20:12:02*****************
+
+0* Boundary elements REAL <-> electrical
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE    
+ ADC_CLK_AMS       0.0       
+ ADC_CMP_OUT_AMS       0.0       
+ ADC_DAC_B0_AMS       0.0       
+ ADC_DAC_B1_AMS       0.0       
+ ADC_DAC_B2_AMS       0.0       
+ ADC_DAC_B3_AMS       0.0       
+ ADC_DAC_B4_AMS       0.0       
+ ADC_DAC_B5_AMS       0.0       
+ ADC_DAC_B6_AMS       0.0       
+ ADC_DAC_B7_AMS       0.0       
+ ADC_DAC_OUT_AMS       0.0       
+ ADC_FF_D_AMS       0.0       
+ ADC_FF_QBAR_AMS       0.0       
+ ADC_FF_Q_AMS       0.0       
+ ADC_FF_RESET_AMS       0.0       
+ ADC_FF_SET_AMS       0.0       
+ ADC_SAR_AUTO_REGISTER_CLK_AMS       0.0       
+ ADC_SAR_AUTO_SEQ_B0_AMS       0.0       
+ ADC_SAR_AUTO_SEQ_B1_AMS       0.0       
+ ADC_SAR_AUTO_SEQ_B2_AMS       0.0       
+ ADC_SAR_AUTO_SEQ_B3_AMS       0.0       
+ ADC_SAR_AUTO_SEQ_B4_AMS       0.0       
+ ADC_SAR_AUTO_SEQ_B5_AMS       0.0       
+ ADC_SAR_AUTO_SEQ_B6_AMS       0.0       
+ ADC_SAR_AUTO_SEQ_B7_AMS       0.0       
+ ADC_SAR_B0B_AMS       0.0       
+ ADC_SAR_B0_AMS       0.0       
+ ADC_SAR_B1B_AMS       0.0       
+ ADC_SAR_B1_AMS       0.0       
+ ADC_SAR_B2B_AMS       0.0       
+ ADC_SAR_B2_AMS       0.0       
+ ADC_SAR_B3B_AMS       0.0       
+ ADC_SAR_B3_AMS       0.0       
+ ADC_SAR_B4B_AMS       0.0       
+ ADC_SAR_B4_AMS       0.0       
+ ADC_SAR_B5B_AMS       0.0       
+ ADC_SAR_B5_AMS       0.0       
+ ADC_SAR_B6B_AMS       0.0       
+ ADC_SAR_B6_AMS       0.0       
+ ADC_SAR_B7B_AMS       0.0       
+ ADC_SAR_B7_AMS       0.0       
+ ADC_SAR_IN_AMS       0.0       
+ ADC_SAR_REGISTER_CLK_AMS       0.0       
+ ADC_SAR_RESET_AMS       0.0       
+ ADC_SAR_SEQ_B0_AMS       0.0       
+ ADC_SAR_SEQ_B1_AMS       0.0       
+ ADC_SAR_SEQ_B2_AMS       0.0       
+ ADC_SAR_SEQ_B3_AMS       0.0       
+ ADC_SAR_SEQ_B4_AMS       0.0       
+ ADC_SAR_SEQ_B5_AMS       0.0       
+ ADC_SAR_SEQ_B6_AMS       0.0       
+ ADC_SAR_SEQ_B7_AMS       0.0       
+ ADC_SAR_SEQ_CLK_AMS       0.0       
+ ADC_SAR_SEQ_RESET_AMS       0.0       
+ ADC_VIN_AMS       0.0       
+ DUT.DAC_VDD       0.0       
+ DUT.DAC_VSS       0.0       
+ DUT.FF_VDD       0.0       
+ DUT.FF_VSS       0.0       
+ DUT.SAR_SEQ_VDD       0.0       
+ DUT.SAR_SEQ_VSS       0.0       
+ DUT.SAR_VDD       0.0       
+ DUT.SAR_VSS       0.0       
+ DUT.SH_VOUT       0.0       
+ DUT.U_SAR_SEQUENCE_ROW.REGISTER_CLK_QBAR       0.0       
+ DUT.U_SAR_SEQUENCE_ROW.SEQ_B0_QBAR       0.0       
+ DUT.U_SAR_SEQUENCE_ROW.SEQ_B1_QBAR       0.0       
+ DUT.U_SAR_SEQUENCE_ROW.SEQ_B2_QBAR       0.0       
+ DUT.U_SAR_SEQUENCE_ROW.SEQ_B3_QBAR       0.0       
+ DUT.U_SAR_SEQUENCE_ROW.SEQ_B4_QBAR       0.0       
+ DUT.U_SAR_SEQUENCE_ROW.SEQ_B5_QBAR       0.0       
+ DUT.U_SAR_SEQUENCE_ROW.SEQ_B6_QBAR       0.0       
+ DUT.U_SAR_SEQUENCE_ROW.SEQ_B7_QBAR       0.0       
+ DUT.U_SAR_SEQUENCE_ROW.START_Q       0.0       
+ DUT.U_SAR_SEQUENCE_ROW.START_QBAR       0.0       
+
+
+
+
+    DC cpu Time 0s 010ms 
+DC:2 iterations FOR DC analysis
+
+
+
+
+1*************** 2-Oct-2026 ***********************  ELDO 2026.1 update1 (64 bits)  (v26.1_1.1)  ***********************20:12:02*****************
+
+0* Boundary elements REAL <-> electrical
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE    
+ ADC_CLK_AMS       0.0       
+ ADC_CMP_OUT_AMS       0.0       
+ ADC_DAC_B0_AMS       0.0       
+ ADC_DAC_B1_AMS       0.0       
+ ADC_DAC_B2_AMS       0.0       
+ ADC_DAC_B3_AMS       0.0       
+ ADC_DAC_B4_AMS       0.0       
+ ADC_DAC_B5_AMS       0.0       
+ ADC_DAC_B6_AMS       0.0       
+ ADC_DAC_B7_AMS       0.0       
+ ADC_DAC_OUT_AMS       0.0       
+ ADC_FF_D_AMS       0.0       
+ ADC_FF_QBAR_AMS       0.0       
+ ADC_FF_Q_AMS       0.0       
+ ADC_FF_RESET_AMS       0.0       
+ ADC_FF_SET_AMS       0.0       
+ ADC_SAR_AUTO_REGISTER_CLK_AMS       0.0       
+ ADC_SAR_AUTO_SEQ_B0_AMS       0.0       
+ ADC_SAR_AUTO_SEQ_B1_AMS       0.0       
+ ADC_SAR_AUTO_SEQ_B2_AMS       0.0       
+ ADC_SAR_AUTO_SEQ_B3_AMS       0.0       
+ ADC_SAR_AUTO_SEQ_B4_AMS       0.0       
+ ADC_SAR_AUTO_SEQ_B5_AMS       0.0       
+ ADC_SAR_AUTO_SEQ_B6_AMS       0.0       
+ ADC_SAR_AUTO_SEQ_B7_AMS       0.0       
+ ADC_SAR_B0B_AMS       0.0       
+ ADC_SAR_B0_AMS       0.0       
+ ADC_SAR_B1B_AMS       0.0       
+ ADC_SAR_B1_AMS       0.0       
+ ADC_SAR_B2B_AMS       0.0       
+ ADC_SAR_B2_AMS       0.0       
+ ADC_SAR_B3B_AMS       0.0       
+ ADC_SAR_B3_AMS       0.0       
+ ADC_SAR_B4B_AMS       0.0       
+ ADC_SAR_B4_AMS       0.0       
+ ADC_SAR_B5B_AMS       0.0       
+ ADC_SAR_B5_AMS       0.0       
+ ADC_SAR_B6B_AMS       0.0       
+ ADC_SAR_B6_AMS       0.0       
+ ADC_SAR_B7B_AMS       0.0       
+ ADC_SAR_B7_AMS       0.0       
+ ADC_SAR_IN_AMS       0.0       
+ ADC_SAR_REGISTER_CLK_AMS       0.0       
+ ADC_SAR_RESET_AMS       0.0       
+ ADC_SAR_SEQ_B0_AMS       0.0       
+ ADC_SAR_SEQ_B1_AMS       0.0       
+ ADC_SAR_SEQ_B2_AMS       0.0       
+ ADC_SAR_SEQ_B3_AMS       0.0       
+ ADC_SAR_SEQ_B4_AMS       0.0       
+ ADC_SAR_SEQ_B5_AMS       0.0       
+ ADC_SAR_SEQ_B6_AMS       0.0       
+ ADC_SAR_SEQ_B7_AMS       0.0       
+ ADC_SAR_SEQ_CLK_AMS       0.0       
+ ADC_SAR_SEQ_RESET_AMS       1.8000E+00
+ ADC_VIN_AMS       0.0       
+ DUT.DAC_VDD       1.8000E+00
+ DUT.DAC_VSS       0.0       
+ DUT.FF_VDD       1.8000E+00
+ DUT.FF_VSS       0.0       
+ DUT.SAR_SEQ_VDD       1.8000E+00
+ DUT.SAR_SEQ_VSS       0.0       
+ DUT.SAR_VDD       1.8000E+00
+ DUT.SAR_VSS       0.0       
+ DUT.SH_VOUT       0.0       
+ DUT.U_SAR_SEQUENCE_ROW.REGISTER_CLK_QBAR       1.0000E+00
+ DUT.U_SAR_SEQUENCE_ROW.SEQ_B0_QBAR       1.0000E+00
+ DUT.U_SAR_SEQUENCE_ROW.SEQ_B1_QBAR       1.0000E+00
+ DUT.U_SAR_SEQUENCE_ROW.SEQ_B2_QBAR       1.0000E+00
+ DUT.U_SAR_SEQUENCE_ROW.SEQ_B3_QBAR       1.0000E+00
+ DUT.U_SAR_SEQUENCE_ROW.SEQ_B4_QBAR       1.0000E+00
+ DUT.U_SAR_SEQUENCE_ROW.SEQ_B5_QBAR       1.0000E+00
+ DUT.U_SAR_SEQUENCE_ROW.SEQ_B6_QBAR       1.0000E+00
+ DUT.U_SAR_SEQUENCE_ROW.SEQ_B7_QBAR       1.0000E+00
+ DUT.U_SAR_SEQUENCE_ROW.START_Q       1.0000E+00
+ DUT.U_SAR_SEQUENCE_ROW.START_QBAR       0.0       
+
+
+
+
+
+Questa-ADMS NEWTON: VNTOL=1.000000e-06 RELTOL=6.111111e-04
+
+
+
+
+1*************** 2-Oct-2026 ***********************  ELDO 2026.1 update1 (64 bits)  (v26.1_1.1)  ***********************20:12:02*****************
+
+0* Boundary elements REAL <-> electrical
+0****                 ACCOUNTING INFORMATION                                 TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+
+
+Number of nodes                     75
+Number of intrinsic nodes           0
+Number of input signals             34
+Number of resistors                 0
+Number of floating capacitors       0
+Number of grounded capacitors       0
+Number of inductors                 0
+Number of voltage sources           0
+Number of current sources           0
+Number of dependent sources         0
+Number of diodes                    0
+Number of BJT                       0
+Number of JFET                      0
+Number of MOS                       0
+Number of SWITCHES                  0
+Number of transmission lines        0
+ADMS devices                        24
+Total number of elements simulated  24
+Number of equations                 82
+Number of non-zero terms            82
+Percent Zeros                      98.78
+Number of Newton iterations         337
+Average number of Newton iterations 1.178
+Number of accepted time steps       286
+Number of rejected time steps       21
+      due to LTE                    0
+      due to Newton                 0
+Evaluation of active devices        0
+Virtual memory size (MB)            749
+Peak memory size (MB)      138
+Number of A2D events.............. 18
+Number of D2A events.............. 21
+Number of time point rejection due 
+  to 'DIGITAL' solver ..............21
+Virtual memory size (MB)            749
+Peak memory size (MB)      138
+
+Simulation Finished.

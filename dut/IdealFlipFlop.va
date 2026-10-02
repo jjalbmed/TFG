@@ -1,0 +1,57 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+module IdealFlipFlop(Set, Reset, D, Q, QBAR, CLK, VDD, VSS);
+
+    parameter real vtrans = 0.9;
+    parameter real delay = 0;
+    parameter real trans_time = 1p;
+    parameter real clk_threshold = 0.9;
+
+    input Set, Reset, D, CLK, VDD, VSS;
+    output Q, QBAR;
+
+    electrical Set, Reset, D, CLK, VDD, VSS, Q, QBAR;
+
+    real b_q, b_qb;
+
+    analog begin
+
+        if (V(Set) > vtrans) begin
+            b_q = 1;
+            b_qb = 0;
+        end
+        else if (V(Reset) > vtrans) begin
+            b_q = 0;
+            b_qb = 1;
+        end
+
+        @(cross(V(CLK) - clk_threshold, +1)) begin
+
+            if (V(Set) > vtrans) begin
+                b_q = 1;
+                b_qb = 0;
+            end
+            else if (V(Reset) > vtrans) begin
+                b_q = 0;
+                b_qb = 1;
+            end
+            else begin
+                if (V(D) > vtrans) begin
+                    b_q = 1;
+                    b_qb = 0;
+                end
+                else begin
+                    b_q = 0;
+                    b_qb = 1;
+                end
+            end
+
+        end
+
+        V(Q)    <+ transition(b_q,  delay, trans_time);
+        V(QBAR) <+ transition(b_qb, delay, trans_time);
+
+    end
+
+endmodule

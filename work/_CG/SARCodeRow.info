@@ -1,0 +1,35 @@
+[VERILOG-AMS Module]
+NAME = SARCodeRow 
+SOURCE = /home/jalberic/proyectos/TFG/dut/SARCodeRow.vams 
+LINE = 6
+[Generics]
+[Ports]
+(PORT TERMINAL In IN electrical)
+(PORT TERMINAL Reset IN electrical)
+(PORT TERMINAL seq_b7 IN electrical)
+(PORT TERMINAL seq_b6 IN electrical)
+(PORT TERMINAL seq_b5 IN electrical)
+(PORT TERMINAL seq_b4 IN electrical)
+(PORT TERMINAL seq_b3 IN electrical)
+(PORT TERMINAL seq_b2 IN electrical)
+(PORT TERMINAL seq_b1 IN electrical)
+(PORT TERMINAL seq_b0 IN electrical)
+(PORT TERMINAL register_clk IN electrical)
+(PORT TERMINAL VDD IN electrical)
+(PORT TERMINAL VSS IN electrical)
+(PORT TERMINAL b7 OUT electrical)
+(PORT TERMINAL b6 OUT electrical)
+(PORT TERMINAL b5 OUT electrical)
+(PORT TERMINAL b4 OUT electrical)
+(PORT TERMINAL b3 OUT electrical)
+(PORT TERMINAL b2 OUT electrical)
+(PORT TERMINAL b1 OUT electrical)
+(PORT TERMINAL b0 OUT electrical)
+(PORT TERMINAL b7b OUT electrical)
+(PORT TERMINAL b6b OUT electrical)
+(PORT TERMINAL b5b OUT electrical)
+(PORT TERMINAL b4b OUT electrical)
+(PORT TERMINAL b3b OUT electrical)
+(PORT TERMINAL b2b OUT electrical)
+(PORT TERMINAL b1b OUT electrical)
+(PORT TERMINAL b0b OUT electrical)

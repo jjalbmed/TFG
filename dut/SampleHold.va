@@ -1,0 +1,25 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+module SampleHold(clk, vin, vout);
+
+    input clk, vin;
+    output vout;
+
+    parameter real vtrans = 0.5;
+    parameter real delay = 0;
+    parameter real trans_time = 1p;
+    parameter real clk_threshold = 0.9;
+
+    electrical vout, vin, clk;
+
+    real v;
+
+    analog begin
+        @(cross(V(clk) - clk_threshold, +1))
+            v = V(vin);
+
+        V(vout) <+ transition(v, delay, trans_time);
+    end
+
+endmodule

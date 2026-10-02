@@ -1,0 +1,1014 @@
+
+============================================================
+1. SISTEMA Y DIRECTORIO
+============================================================
+Thu Oct  1 10:55:40 CEST 2026
+JOSE
+jalberic
+Linux JOSE 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+PWD inicial: /home/jalberic/proyectos/TFG/diganostico
+PWD proyecto: /home/jalberic/proyectos/TFG
+
+============================================================
+2. VARIABLES DE ENTORNO RELEVANTES
+============================================================
+PATH=/eda/SolidoSimulationSuite/solidosim/solidosim//questasim/linux_x86_64:/eda/SolidoSimulationSuite/solidosim/solidosim//questasim/linux_x86_64:/eda/SolidoSimulationSuite/solidosim/solidosim//afs/bin:/eda/SolidoSimulationSuite/solidosim/solidosim//sfs/bin:/eda/SolidoSimulationSuite/solidosim/solidosim//questasim/bin:/eda/SolidoSimulationSuite/solidosim/solidosim//symphony/bin:/eda/SolidoSimulationSuite/solidosim/solidosim//bin:/eda/SolidoSimulationSuite/solidosim/solidosim//questasim/bin:/home/jalberic/.local/bin:/home/jalberic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/adame/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/adame/AppData/Local/Programs/Microsoft VS Code/bin
+LD_LIBRARY_PATH=/eda/SolidoSimulationSuite/solidosim/solidosim//afs/lib:/eda/SolidoSimulationSuite/solidosim/solidosim//sfs/lib:
+LD_LIBRARY_PATH=/eda/SolidoSimulationSuite/solidosim/solidosim//afs/lib:/eda/SolidoSimulationSuite/solidosim/solidosim//sfs/lib:
+PATH=/eda/SolidoSimulationSuite/solidosim/solidosim//questasim/linux_x86_64:/eda/SolidoSimulationSuite/solidosim/solidosim//questasim/linux_x86_64:/eda/SolidoSimulationSuite/solidosim/solidosim//afs/bin:/eda/SolidoSimulationSuite/solidosim/solidosim//sfs/bin:/eda/SolidoSimulationSuite/solidosim/solidosim//questasim/bin:/eda/SolidoSimulationSuite/solidosim/solidosim//symphony/bin:/eda/SolidoSimulationSuite/solidosim/solidosim//bin:/eda/SolidoSimulationSuite/solidosim/solidosim//questasim/bin:/home/jalberic/.local/bin:/home/jalberic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/adame/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/adame/AppData/Local/Programs/Microsoft VS Code/bin
+
+============================================================
+3. EJECUTABLES EN USO
+============================================================
+
+---- vlog ----
+/eda/SolidoSimulationSuite/solidosim/solidosim//questasim/linux_x86_64/vlog
+vlog is /eda/SolidoSimulationSuite/solidosim/solidosim//questasim/linux_x86_64/vlog
+vlog is /eda/SolidoSimulationSuite/solidosim/solidosim//questasim/linux_x86_64/vlog
+vlog is /eda/SolidoSimulationSuite/solidosim/solidosim//questasim/bin/vlog
+vlog is /eda/SolidoSimulationSuite/solidosim/solidosim//questasim/bin/vlog
+
+---- vlib ----
+/eda/SolidoSimulationSuite/solidosim/solidosim//questasim/linux_x86_64/vlib
+vlib is /eda/SolidoSimulationSuite/solidosim/solidosim//questasim/linux_x86_64/vlib
+vlib is /eda/SolidoSimulationSuite/solidosim/solidosim//questasim/linux_x86_64/vlib
+vlib is /eda/SolidoSimulationSuite/solidosim/solidosim//questasim/bin/vlib
+vlib is /eda/SolidoSimulationSuite/solidosim/solidosim//questasim/bin/vlib
+
+---- vsim ----
+/eda/SolidoSimulationSuite/solidosim/solidosim//questasim/linux_x86_64/vsim
+vsim is /eda/SolidoSimulationSuite/solidosim/solidosim//questasim/linux_x86_64/vsim
+vsim is /eda/SolidoSimulationSuite/solidosim/solidosim//questasim/linux_x86_64/vsim
+vsim is /eda/SolidoSimulationSuite/solidosim/solidosim//questasim/bin/vsim
+vsim is /eda/SolidoSimulationSuite/solidosim/solidosim//questasim/bin/vsim
+
+---- vasim ----
+/eda/SolidoSimulationSuite/solidosim/solidosim//bin/vasim
+vasim is /eda/SolidoSimulationSuite/solidosim/solidosim//bin/vasim
+
+---- valog ----
+/eda/SolidoSimulationSuite/solidosim/solidosim//bin/valog
+valog is /eda/SolidoSimulationSuite/solidosim/solidosim//bin/valog
+
+---- vams ----
+/eda/SolidoSimulationSuite/solidosim/solidosim//bin/vams
+vams is /eda/SolidoSimulationSuite/solidosim/solidosim//bin/vams
+
+---- ezwave ----
+/eda/SolidoSimulationSuite/solidosim/solidosim//bin/ezwave
+ezwave is /eda/SolidoSimulationSuite/solidosim/solidosim//bin/ezwave
+
+============================================================
+4. VERSIONES
+============================================================
+--- vlog -version ---
+QuestaSim-64 vlog 2026.1_1 Compiler 2026.03 Mar  2 2026
+
+--- vsim -version ---
+Questa Sim-64 vsim 2026.1_1 Simulator 2026.03 Mar  2 2026
+
+
+--- vasim -version ---
+/eda/SolidoSimulationSuite/solidosim/solidosim/aol/bin/vasim_64 : 2026.1 update1
+
+============================================================
+5. QFORAMS 2025.3_2
+============================================================
+QFORAMS=/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2
+   196479      0 lrwxrwxrwx   1  jalberic jalberic        6 Jul 24 20:37 /eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/bin/vlog -> ../vco
+   196392      0 lrwxrwxrwx   1  jalberic jalberic        6 Jul 24 20:37 /eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/bin/vlib -> ../vco
+   196465      0 lrwxrwxrwx   1  jalberic jalberic        6 Jul 24 20:37 /eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/bin/vsim -> ../vco
+   190309  30764 -rwxr-xr-x   1  jalberic jalberic 31500976 Nov 20  2025 /eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/vlog
+    87969  14268 -rwxr-xr-x   1  jalberic jalberic 14607600 Nov 20  2025 /eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/vlib
+   190318  11276 -rwxr-xr-x   1  jalberic jalberic 11545504 Nov 20  2025 /eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/vsim
+
+--- version del vlog QFORAMS ---
+QuestaSim-64 vlog 2025.3_2 Compiler 2025.11 Nov 20 2025
+
+============================================================
+6. HERRAMIENTAS ANALOGICAS / VALOG
+============================================================
+   228726   1920 -rwxr-xr-x   1  jalberic jalberic  1964112 Mar 13  2026 /eda/SolidoSimulationSuite/solidosim/solidosim/aol/bin/valog_64
+   249003      0 lrwxrwxrwx   1  jalberic jalberic       14 Jul 24 20:38 /eda/SolidoSimulationSuite/solidosim/solidosim/bin/valog -> ams_command.sh
+
+--- localizacion liberrm_64.so ---
+    91293    136 -rw-r--r--   1  jalberic jalberic   135171 Jan  7  2015 /eda/SolidoSimulationSuite/solidosim/solidosim/aol/lib/aditlib_19_3/liberrm_64.so
+    91246    136 -rw-r--r--   1  jalberic jalberic   135744 Jul 24  2019 /eda/SolidoSimulationSuite/solidosim/solidosim/aol/lib/liberrm_64.so
+
+--- valog_64: file / ldd ---
+/eda/SolidoSimulationSuite/solidosim/solidosim/aol/bin/valog_64: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.32, not stripped
+	linux-vdso.so.1 (0x00007600b84ac000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x00007600b7e00000)
+	liberrm_64.so => not found
+	libuinfo.so => not found
+	libstdc++.so.6 => /lib64/libstdc++.so.6 (0x00007600b7a00000)
+	libm.so.6 => /lib64/libm.so.6 (0x00007600b7600000)
+	libgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x00007600b7200000)
+	libc.so.6 => /lib64/libc.so.6 (0x00007600b6e00000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007600b8200000)
+
+============================================================
+7. VASIM: RESOLUCION Y WRAPPERS
+============================================================
+vasim command: /eda/SolidoSimulationSuite/solidosim/solidosim//bin/vasim
+lrwxrwxrwx 1 jalberic jalberic 14 Jul 24 20:38 /eda/SolidoSimulationSuite/solidosim/solidosim//bin/vasim -> ams_command.sh
+/eda/SolidoSimulationSuite/solidosim/solidosim/bin/ams_command.sh
+/eda/SolidoSimulationSuite/solidosim/solidosim//bin/vasim: symbolic link to ams_command.sh
+
+--- candidatos vasim ---
+   147163    288 -rwxr-xr-x   1  jalberic jalberic   293648 Mar 13  2026 /eda/SolidoSimulationSuite/solidosim/solidosim/aol/bin/vasim_64
+   248992      0 lrwxrwxrwx   1  jalberic jalberic       14 Jul 24 20:38 /eda/SolidoSimulationSuite/solidosim/solidosim/bin/vasim -> ams_command.sh
+   141358      4 -rw-r--r--   1  jalberic jalberic      778 Mar 13  2026 /eda/SolidoSimulationSuite/solidosim/solidosim/etc/gui/vasim.tc_
+
+============================================================
+8. MODELSIM.INI / LIBRERIAS
+============================================================
+--- modelsim.ini ---
+; vsim modelsim.ini file
+[Version]
+INIVersion = "2025.3_2"
+
+; Unpublished work. Copyright 2025 Siemens
+;
+; This material contains trade secrets or otherwise confidential information 
+; owned by Siemens Industry Software Inc. or its affiliates (collectively, 
+; "SISW"), or its licensors. Access to and use of this information is strictly
+; limited as set forth in the Customer's applicable agreements with SISW.
+;
+; This material may not be copied, distributed, or otherwise disclosed outside 
+; of the Customer's facilities without the express written permission of SISW,
+; and may not be used in any way not expressly authorized by SISW.
+;
+
+[Library]
+STD = $AMS_MODEL_TECH/std
+IEEE = $AMS_MODEL_TECH/ieee
+VITAL2000 = $AMS_MODEL_TECH/vital2000
+;
+; VITAL concerns:
+;
+; The library ieee contains (among other packages) the packages of the
+; VITAL 2000 standard.  When a design uses VITAL 2000 exclusively, it should use
+; the physical library ieee (recommended), or use the physical library
+; vital2000, but not both.  The design can use logical library ieee and/or
+; vital2000 as long as each of these maps to the same physical library, either
+; ieee or vital2000.
+;
+; A design using the 1995 version of the VITAL packages, whether or not
+; it also uses the 2000 version of the VITAL packages, must have logical library
+; name ieee mapped to physical library vital1995.  (A design cannot use library
+; vital1995 directly because some packages in this library use logical name ieee
+; when referring to the other packages in the library.)  The design source
+; should use logical name ieee when referring to any packages there except the
+; VITAL 2000 packages.  Any VITAL 2000 present in the design must use logical
+; name vital2000 (mapped to physical library vital2000) to refer to those
+; packages.
+; ieee = $QUESTASIM_DIR/../vital1995
+;
+; For compatiblity with previous releases, logical library name vital2000 maps
+; to library vital2000 (a different library than library ieee, containing the
+; same packages).
+; A design should not reference VITAL from both the ieee library and the
+; vital2000 library because the vital packages are effectively different.
+; A design that references both the ieee and vital2000 libraries must have
+; both logical names ieee and vital2000 mapped to the same library, either of
+; these:
+;   $QUESTASIM_DIR/../ieee
+;   $QUESTASIM_DIR/../vital2000
+;
+verilog = $AMS_MODEL_TECH/verilog
+std_developerskit = $QUESTASIM_DIR/../std_developerskit
+SYNOPSYS = $AMS_MODEL_TECH/synopsys
+MODELSIM_LIB = $AMS_MODEL_TECH/modelsim_lib
+; adding mapping for ADMS
+VITAL2.2B = $AMS_MODEL_TECH/vital2.2b
+ARITHMETIC = $AMS_MODEL_TECH/ARITHMETIC
+
+sv_std = $QUESTASIM_DIR/../sv_std
+mtiAvm = $QUESTASIM_DIR/../avm
+mtiRnm = $QUESTASIM_DIR/../rnm
+mtiOvm = $QUESTASIM_DIR/../ovm-2.1.2
+mtiUvm = $QUESTASIM_DIR/../uvm-1.1d
+mtiUPF = $QUESTASIM_DIR/../upf_lib
+flcov_ce_lib = $QUESTASIM_DIR/../flcov_ce_lib
+mtiPA  = $AMS_MODEL_TECH/pa_lib
+floatfixlib = $QUESTASIM_DIR/../floatfixlib
+mc2_lib = $QUESTASIM_DIR/../mc2_lib
+flps_lib = $QUESTASIM_DIR/../flps_lib
+
+; added mapping for ADMS
+mgc_ams = $AMS_MODEL_TECH/MGC_AMS
+ieee_env = $AMS_MODEL_TECH/IEEE_ENV
+
+;vhdl_psl_checkers = $QUESTASIM_DIR/../vhdl_psl_checkers       // Source files only for this release
+;verilog_psl_checkers = $QUESTASIM_DIR/../verilog_psl_checkers // Source files only for this release
+;mvc_lib = $QUESTASIM_DIR/../mvc_lib
+infact = $QUESTASIM_DIR/../infact
+vh_flcov_lib = $QUESTASIM_DIR/../vh_flcov_lib
+vhdlopt_lib = $QUESTASIM_DIR/../vhdlopt_lib
+vh_ux01v_lib = $QUESTASIM_DIR/../vh_ux01v_lib
+
+qoneRandLib = $QUESTASIM_DIR/../qoneRandLib
+
+; Automatically perform logical->physical mapping for physical libraries that
+; appear in -L/-Lf options with filesystem path delimiters (e.g. '.' or '/').
+; The tail of the filesystem path name is chosen as the logical library name.
+; For example, in the command "vopt -L ./path/to/lib1 -o opttop top",
+; vopt automatically performs the mapping "lib1 -> ./path/to/lib1".
+; See the User Manual for more details.
+;
+; AutoLibMapping = 0
+
+[BC_COMPAT]
+; Start of Backward Compatibility Section
+; The Variables in this section are dedicated for the Backward Compatibility feature
+; Set desired release version for backward compatibility, valid options are 2023.1 and 2024.1
+;BC_ReleaseCompat = <2023.1/2024.1>
+;BC_XClass = <activate/deactivate>
+; End of Backward Compatibility Section
+ 
+[DefineOptionset]
+; Define optionset entries for the various compilers, vmake, and vsim.
+; These option sets can be used with the "-optionset <optionsetname>" syntax.
+; i.e.
+;  vlog -optionset COMPILEDEBUG top.sv
+;  vsim -optionset UVMDEBUG my_top
+;
+; Following are some useful examples.
+
+; define a vsim optionset for uvm debugging
+UVMDEBUG = -uvmcontrol=all -msgmode both -displaymsgmode both -classdebug -onfinish stop
+
+; define a vopt optionset for debugging
+VOPTDEBUG = +acc -debugdb
+
+[encryption]
+; For vencrypt and vhencrypt.
+
+; Controls whether to encrypt whole files by ignoring all protect directives
+; (except "viewport" and "interface_viewport") that are present in the input.
+; The default is 0, use embedded protect directives to control the encryption.
+; Set this to 1 to encrypt whole files by ignoring embedded protect directives.
+; wholefile = 0
+
+; Sets the data_method to use for the symmetric session key.
+; The session key is a symmetric key that is randomly generated for each
+; protected region (envelope) and is the heart of all encryption.  This is used
+; to set the length of the session key to generate and use when encrypting the
+; HDL text.  Supported values are aes128, aes192, and aes256.
+; data_method = aes128
+
+; The following 2 are for specifying an IEEE Std. 1735 Version 2 (V2) encryption
+; "recipe" comprising an optional common block, at least one tool block (which
+; contains the key public key), and the text to be encrypted.  The common block
+; and any of the tool blocks may contain rights in the form of the "control"
+; directive.  The text to be encrypted is specified either by setting
+; "wholefile" to 1 or by embedding protect "begin" and "end" directives in
+; the input HDL files.
+
+; Common recipe specification file.  This file is optional.  Its presence will
+; require at least one "toolblock" to be specified.
+; Directives such as "author" "author_info" and "data_method",
+; as well as the common block license specification, go in this file.
+; common = <file name>
+
+; Tool block specification recipe(s).  Public key file with optional tool block
+; file name.  May be multiply-defined; at least one tool block is required if
+; a recipe is being specified.
+; Key file is a file name with no extension (.deprecated or .active will be
+; supplied by the encryption tool).
+; Rights file name is optional.
+; toolblock = <key file name>[,<rights file name>]{:<key file name>[,<rights file name>]}
+
+; Location of directory containing recipe files.
+; The default location is in the product installation directory.
+; keyring = $QUESTASIM_DIR/../keyring
+
+; Enable encryption statistics. Specify one or more arguments: 
+;                   [all,none,time,cmd,msg,perf,verbose,list]
+; Add '-' to disable specific statistics. Default is [cmd,msg].
+Stats = cmd,msg
+
+[vcom]
+; VHDL93 variable selects language version as the default. 
+; Default is VHDL-2002.
+; Value of 0 or 1987 for VHDL-1987.
+; Value of 1 or 1993 for VHDL-1993.
+; Default or value of 2 or 2002 for VHDL-2002.
+; Value of 3 or 2008 for VHDL-2008
+; Value of 4 or ams99 for VHDL-AMS-1999
+; Value of 5 or ams07 for VHDL-AMS-2007
+; Value of 7 or 2019 for VHDL-2019
+VHDL93 = 2002
+
+; Turn on creation of VHDL package and entity source file (_parsed.vhd).
+; Default is off (0).
+CreateSource = 1
+
+; Ignore VHDL-2008 declaration of REAL_VECTOR in package STANDARD. Default is off.
+; ignoreStandardRealVector = 1
+
+; Show source line containing error. Default is off.
+; Show_source = 1
+
+; Turn off unbound-component warnings. Default is on.
+; Show_Warning1 = 0
+
+; Turn off process-without-a-wait-statement warnings. Default is on.
+; Show_Warning2 = 0
+
+; Turn off null-range warnings. Default is on.
+; Show_Warning3 = 0
+
+; Turn off no-space-in-time-literal warnings. Default is on.
+; Show_Warning4 = 0
+
+; Turn off multiple-drivers-on-unresolved-signal warnings. Default is on.
+; Show_Warning5 = 0
+
+; Turn off optimization for IEEE std_logic_1164 package. Default is on.
+; Optimize_1164 = 0
+
+; Enable compiler statistics. Specify one or more arguments: 
+;                   [all,none,time,cmd,msg,perf,verbose,list]
+; Add '-' to disable specific statistics. Default is [time,cmd,msg].
+; Stats = time,cmd,msg
+
+; Turn on resolving of ambiguous function overloading in favor of the
+; "explicit" function declaration (not the one automatically created by
+; the compiler for each type declaration). Default is off.
+; The .ini file has Explicit enabled so that std_logic_signed/unsigned
+; will match the behavior of synthesis tools.
+Explicit = 1
+
+; Turn off acceleration of the VITAL packages. Default is to accelerate.
+; NoVital = 1
+
+; Turn off VITAL compliance checking. Default is checking on.
+; NoVitalCheck = 1
+
+; Ignore VITAL compliance checking errors. Default is to not ignore.
+; IgnoreVitalErrors = 1
+
+; Turn off VITAL compliance checking warnings. Default is to show warnings.
+; Show_VitalChecksWarnings = 0
+
+; Turn off PSL assertion warning messages. Default is to show warnings.
+; Show_PslChecksWarnings = 0
+
+; Enable parsing of embedded PSL assertions. Default is enabled.
+; EmbeddedPsl = 0
+
+; Keep silent about case statement static warnings.
+; Default is to give a warning.
+; NoCaseStaticError = 1
+
+; Keep silent about warnings caused by aggregates that are not locally static.
+
+--- contenido de work ---
+2026-10-01 10:32:02.4019078780 work/_lib1_0.qpg
+2026-10-01 10:32:02.4037283120 work/_lib1_0.qtl
+2026-10-01 10:32:02.4041451010 work/_info
+2026-10-01 10:32:02.4042269210 work/_lib1_0.qdb
+2026-10-01 10:32:02.4042269210 work/_lib.qdb
+2026-10-01 10:32:02.4042269210 work/_vmake
+
+============================================================
+9. ESTRUCTURA DEL REPOSITORIO
+============================================================
+./dut/adc_top.v
+./dut/sample_hold_rnm.sv
+./dut/SampleHold.va
+./sim/ms_sample_hold.cmd
+./sim/ms_sample_hold_top.v
+./sim/sanity/real_number_test.sv
+./tb/adc_tb_pkg.sv
+./tb/agent/adc_agent.sv
+./tb/agent/adc_driver.sv
+./tb/agent/adc_monitor.sv
+./tb/agent/adc_sequencer.sv
+./tb/bridges/sample_hold_bridge.vams
+./tb/env/adc_env.sv
+./tb/interfaces/adc_gp_interface.sv
+./tb/sequences/adc_sequence.sv
+./tb/sequences/sh_sequence.sv
+./tb/tb_top.sv
+./tb/transactions/adc_transaction.sv
+./test_fixture.sv
+./tests/adc_base_test.sv
+./tests/adc_sh_test.sv
+./tests/burner_test.sv
+
+============================================================
+10. REFERENCIAS A SAMPLEHOLD / ADC_TOP
+============================================================
+dut/sample_hold_rnm.sv:1:module sample_hold_rnm (
+dut/adc_top.v:5:// boundary elements at the SampleHold instance.
+dut/adc_top.v:6:module adc_top(clk, vin, vout);
+dut/adc_top.v:12:    SampleHold u_sample_hold (
+dut/SampleHold.va:4:module SampleHold(clk, vin, vout);
+tb/bridges/sample_hold_bridge.vams:3:module sample_hold_bridge(vin_r, vin_a);
+sim/ms_sample_hold.cmd:3:.model a2d_real a2d mode=real
+sim/ms_sample_hold.cmd:4:.model d2a_real d2a mode=real
+sim/ms_sample_hold.cmd:6:.defhook a2d_real d2a_real
+sim/ms_sample_hold_top.v:3:module ms_sample_hold_top;
+sim/ms_sample_hold_top.v:15:    SampleHold dut (
+test_fixture.sv:28:    adc_top dut (
+
+============================================================
+11. FUENTES ANALOGICAS COMPLETAS
+============================================================
+
+---------------- FILE: dut/SampleHold.va ----------------
+`include "constants.vams"
+`include "disciplines.vams"
+
+module SampleHold(clk, vin, vout);
+
+    input clk, vin;
+    output vout;
+
+    parameter real vtrans = 0.5;
+    parameter real delay = 0;
+    parameter real trans_time = 1p;
+    parameter real clk_threshold = 0.9;
+
+    electrical vout, vin, clk;
+
+    real v;
+
+    analog begin
+        @(cross(V(clk) - clk_threshold, +1))
+            v = V(vin);
+
+        V(vout) <+ transition(v, delay, trans_time);
+    end
+
+endmodule
+---------------- FILE: tb/bridges/sample_hold_bridge.vams ----------------
+`include "disciplines.vams"
+
+module sample_hold_bridge(vin_r, vin_a);
+
+    input  wreal      vin_r;
+    output electrical vin_a;
+
+    analog begin
+        V(vin_a) <+ vin_r;
+    end
+
+endmodule
+============================================================
+12. ARCHIVOS CLAVE
+============================================================
+
+---------------- FILE: dut/adc_top.v ----------------
+`timescale 1ns/1ps
+
+// Verilog wrapper for the mixed-signal ADC hierarchy.
+// The wreal ports allow ADMS to insert the existing REAL <-> electrical
+// boundary elements at the SampleHold instance.
+module adc_top(clk, vin, vout);
+
+    input  wreal clk;
+    input  wreal vin;
+    output wreal vout;
+
+    SampleHold u_sample_hold (
+        .clk  (clk),
+        .vin  (vin),
+        .vout (vout)
+    );
+
+endmodule
+
+---------------- FILE: test_fixture.sv ----------------
+`timescale 1ns/1ps
+
+module test_fixture;
+
+    gp_adc_interface intf();
+
+    // Redes wreal en el límite digital/analógico del ADC.
+    wreal adc_clk_ams;
+    wreal adc_vin_ams;
+    wreal adc_vout_ams;
+    //***********************************
+    //conversion señales de la if a wreal
+    //***********************************
+    //inputs
+    assign adc_clk_ams = intf.clk ? 1.8 : 0.0;
+    assign adc_vin_ams = intf.vin;
+    //outputs
+    assign intf.vout = adc_vout_ams;
+    // interfaz
+
+    //tb_top
+
+    tb_top tb(
+        .intf(intf)
+    );
+
+    //ADC DUT
+    adc_top dut (
+        .clk  (adc_clk_ams),
+        .vin  (adc_vin_ams),
+        .vout (adc_vout_ams)
+    );
+
+endmodule
+
+---------------- FILE: sim/ms_sample_hold_top.v ----------------
+`timescale 1ns/1ps
+
+module ms_sample_hold_top;
+
+    real clk_drv;
+    real vin_drv;
+
+    wreal clk;
+    wreal vin;
+    wreal vout;
+
+    assign clk = clk_drv;
+    assign vin = vin_drv;
+
+    SampleHold dut (
+        .clk  (clk),
+        .vin  (vin),
+        .vout (vout)
+    );
+
+    // Clock: 0 V / 1.8 V
+    initial begin
+        clk_drv = 0.0;
+        forever #5
+            clk_drv = (clk_drv < 0.9) ? 1.8 : 0.0;
+    end
+
+    // Entrada analógica
+    initial begin
+        vin_drv = 0.73;
+
+        #12;
+        vin_drv = 1.20;
+
+        #20;
+        $finish;
+    end
+
+    initial begin
+        $monitor(
+            "t=%0t clk=%0.2f V vin=%0.3f V vout=%0.3f V",
+            $time, clk, vin, vout
+        );
+    end
+
+endmodule
+---------------- FILE: sim/ms_sample_hold.cmd ----------------
+* Boundary elements REAL <-> electrical
+
+.model a2d_real a2d mode=real
+.model d2a_real d2a mode=real
+
+.defhook a2d_real d2a_real
+
+.probe tran v
+---------------- FILE: tb/interfaces/adc_gp_interface.sv ----------------
+// ADC top-level verification interface.
+interface gp_adc_interface;
+    logic clk;
+    real vin, vout;
+
+    modport driver (
+        input clk,
+        output vin
+    );
+
+    modport dut (
+        input clk,
+        input vin,
+        output vout
+    );
+
+    modport monitor (
+        input clk,
+        input vin,
+        input vout
+    );
+
+endinterface
+
+---------------- FILE: tb/agent/adc_driver.sv ----------------
+class adc_driver extends uvm_driver #(adc_transaction);
+
+    `uvm_component_utils(adc_driver)
+
+    virtual gp_adc_interface.driver vif;
+
+    function new(string name="adc_driver", uvm_component parent=null);
+        super.new(name, parent);
+    endfunction
+
+    function void build_phase(uvm_phase phase);
+        super.build_phase(phase);
+
+        if (!uvm_config_db#(
+            virtual gp_adc_interface.driver
+        )::get(this, "", "vif", vif))
+            `uvm_fatal("NO VIF", "VIF no declarada")
+
+    endfunction
+
+
+    task run_phase(uvm_phase phase);
+
+        forever begin
+
+            seq_item_port.get_next_item(req); //1. esperar primera transacción
+
+            `uvm_info("DRV",
+                $sformatf("ADC vin = %0.3f", req.vin),
+                UVM_LOW)
+
+            vif.vin = req.vin;
+
+            @(posedge vif.clk);//3. Esperar evento de captura
+
+            seq_item_port.item_done();//4. Indicar que se ha acabado
+
+        end
+
+    endtask
+
+endclass
+
+---------------- FILE: tb/agent/adc_monitor.sv ----------------
+class adc_monitor extends uvm_monitor;
+
+    `uvm_component_utils(adc_monitor)
+
+    virtual gp_adc_interface.monitor vif; //limito acceso a modport monitor
+
+
+    uvm_analysis_port #(adc_transaction) ap;
+
+    function new(string name ="adc_monitor", uvm_component parent = null);
+        super.new(name,parent);
+        ap = new("ap",this);
+    endfunction
+
+    function void build_phase (uvm_phase phase);
+        super.build_phase (phase);
+        if 
+            (!uvm_config_db#(virtual gp_adc_interface.monitor)::get(this,"","vif",vif))
+            begin
+                `uvm_fatal("NO VIF", "VIF no declarada")
+            end
+    endfunction : build_phase
+
+    task run_phase (uvm_phase phase);
+
+        adc_transaction tr;
+
+        forever begin
+            @(posedge vif.clk);
+            #100ps;
+
+            tr = adc_transaction::type_id::create("tr");
+            
+            tr.vin = vif.vin;
+            tr.vout = vif.vout;
+
+            `uvm_info("MON", $sformatf("ADC vin = %0.3f | ADC vout = %0.3f", tr.vin, tr.vout),UVM_LOW)
+
+            ap.write(tr);
+        end
+
+    endtask : run_phase
+
+endclass
+
+---------------- FILE: tb/transactions/adc_transaction.sv ----------------
+class adc_transaction extends uvm_sequence_item;
+    `uvm_object_utils(adc_transaction)
+
+    // ADC top-level stimulus and observed result.
+    real vin, vout;
+
+    function new (string name="adc_transaction");
+        super.new(name);
+    endfunction : new
+
+endclass
+
+---------------- FILE: tb/sequences/sh_sequence.sv ----------------
+class sh_sequence extends uvm_sequence #(adc_transaction);
+
+    `uvm_object_utils(sh_sequence)
+
+    function new(string name = "sh_sequence");
+        super.new(name);
+    endfunction
+    
+    task body();
+
+        adc_transaction req;
+        req = adc_transaction::type_id::create("req");
+
+        start_item(req);
+
+        req.vin = 0.73;
+
+        finish_item(req);
+
+    endtask
+
+endclass
+
+---------------- FILE: tb/adc_tb_pkg.sv ----------------
+package adc_tb_pkg;
+
+    import uvm_pkg::*;
+    `include "uvm_macros.svh"
+
+    `include "transactions/adc_transaction.sv"
+    `include "sequences/adc_sequence.sv"
+    `include "sequences/sh_sequence.sv"
+    
+    `include "agent/adc_sequencer.sv"
+    `include "agent/adc_driver.sv"
+    `include "agent/adc_monitor.sv"
+    `include "agent/adc_agent.sv"
+
+    `include "env/adc_env.sv"
+
+    `include "/home/jalberic/proyectos/TFG/tests/adc_base_test.sv"
+    `include "/home/jalberic/proyectos/TFG/tests/adc_sh_test.sv"
+    
+endpackage    
+============================================================
+13. TRANSCRIPTS: COMO SE CARGABA SAMPLEHOLD
+============================================================
+
+---------------- LOG: transcript ----------------
+1:# vasim -c -cmd sim/ms_sample_hold.cmd work.test_fixture +UVM_TESTNAME=adc_sh_test -do {run -all; quit -f}
+3:# ** Note: (vasim-3800) Running Questa ADMS 2026.1 update1 Fri Mar 13 07:49:54 GMT 2026
+28:# Loading "/eda/SolidoSimulationSuite/solidosim/solidosim/libs/std.standard"
+29:# Loading "/eda/SolidoSimulationSuite/solidosim/solidosim/libs/ieee.std_logic_1164"
+52:# FATAL ERROR while loading design
+53:# Error loading design
+54:# ** Error: (vasim-3433) Elaboration failed.
+58:# ** Error: Loading design failed
+
+---------------- LOG: transcript_ms ----------------
+
+---------------- LOG: vasim.errm.log ----------------
+2:** Note: (vasim-3800) Running Questa ADMS 2026.1 update1 Fri Mar 13 07:49:54 GMT 2026
+4:Loading "/eda/SolidoSimulationSuite/solidosim/solidosim/libs/std.standard"
+5:Loading "/eda/SolidoSimulationSuite/solidosim/solidosim/libs/ieee.std_logic_1164"
+6:Loading "/home/jalberic/proyectos/TFG/work.SampleHold"
+7:Loading "/eda/SolidoSimulationSuite/solidosim/solidosim/libs/MGC_AMS.wreal_pkg"
+13:** Error: (vasim-1402) In file "sim/ms_sample_hold_top.v", line 15: instantiation of dut(SampleHold) failed.
+14:+   Converter insertion failed.
+15:+   No boundary element of type "Real" to Verilog-AMS "electrical" for net CLK, port dut.clk
+17:** Error: (vasim-1402) In file "sim/ms_sample_hold_top.v", line 15: instantiation of dut(SampleHold) failed.
+18:+   Converter insertion failed.
+19:+   No boundary element of type "Real" to Verilog-AMS "electrical" for net VIN, port dut.vin
+21:** Error: (vasim-1402) In file "sim/ms_sample_hold_top.v", line 15: instantiation of dut(SampleHold) failed.
+22:+   Converter insertion failed.
+23:+   No boundary element Verilog-AMS "electrical" to type "Real" for net VOUT, port dut.vout
+25:** Fatal: (vasim-1303) Stop due to previous elaboration failure
+
+---------------- LOG: sim/ms_sample_hold.errm.log ----------------
+2:** Note: (vasim-3800) Running Questa ADMS 2026.1 update1 Fri Mar 13 07:49:54 GMT 2026
+4:Loading "/eda/SolidoSimulationSuite/solidosim/solidosim/libs/std.standard"
+5:Loading "/eda/SolidoSimulationSuite/solidosim/solidosim/libs/ieee.std_logic_1164"
+6:** Error: (vasim-3433) Elaboration failed.
+
+============================================================
+14. ARCHIVOS GENERADOS POR ADMS
+============================================================
+2026-09-14 20:19:31.0572023700         55 ./ms_sample_hold_top.id
+2026-09-14 20:19:33.4410537200       1117 ./ms_sample_hold_top.wdb
+2026-09-14 20:19:33.4410537200       1784 ./vasim.errm.log
+2026-09-14 20:19:33.5250342700       2642 ./ms_sample_hold_top.chi
+2026-10-01 08:48:11.1871099600        834 sim/ms_sample_hold.conv
+2026-10-01 08:48:11.1871099600        834 ./sim/ms_sample_hold.conv
+2026-10-01 10:25:15.2295862150         55 sim/ms_sample_hold.id
+2026-10-01 10:25:15.2295862150         55 ./sim/ms_sample_hold.id
+2026-10-01 10:25:18.2967008840       1074 sim/ms_sample_hold.wdb
+2026-10-01 10:25:18.2967008840       1074 ./sim/ms_sample_hold.wdb
+2026-10-01 10:25:18.2971742900        438 sim/ms_sample_hold.errm.log
+2026-10-01 10:25:18.2971742900        438 ./sim/ms_sample_hold.errm.log
+2026-10-01 10:25:18.3291539960       1574 sim/ms_sample_hold.chi
+2026-10-01 10:25:18.3291539960       1574 ./sim/ms_sample_hold.chi
+
+============================================================
+15. CONVERTERS INSERTADOS
+============================================================
+
+---------------- FILE: sim/ms_sample_hold.conv ----------------
+NET :test_fixture:sh_clk_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:clk;
+		WAVEFORM NAME :test_fixture:sh_clk_ams
+END NET;
+
+NET :test_fixture:sh_vin_ams
+	DtoA CONVERTER D2A_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:vin;
+		WAVEFORM NAME :test_fixture:sh_vin_ams
+END NET;
+
+NET :test_fixture:sh_vout_ams
+	AtoD CONVERTER A2D_REAL ELDO ["MODE = REAL"]
+		DEFHOOK /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd(6)
+		DISCIPLINE ELECTRICAL
+		TYPE MGC_AMS:WREAL_PKG.WREAL
+		PORTS :test_fixture:dut:vout;
+		WAVEFORM NAME :test_fixture:sh_vout_ams
+END NET;
+
+
+============================================================
+16. BUSQUEDA DE SAMPLEHOLD
+============================================================
+--- fuentes del proyecto ---
+   294141      4 -rw-rw-r--   1  jalberic jalberic      192 Sep 14 19:50 /home/jalberic/proyectos/TFG/tb/bridges/sample_hold_bridge.vams
+   294296      4 -rw-rw-r--   1  jalberic jalberic       55 Sep 14 20:19 /home/jalberic/proyectos/TFG/ms_sample_hold_top.id
+   294295      4 -rw-rw-r--   1  jalberic jalberic     2642 Sep 14 20:19 /home/jalberic/proyectos/TFG/ms_sample_hold_top.chi
+   294167      4 -rw-rw-r--   1  jalberic jalberic     1117 Sep 14 20:19 /home/jalberic/proyectos/TFG/ms_sample_hold_top.wdb
+      576      4 -rw-rw-r--   1  jalberic jalberic      143 Oct  1 08:45 /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd
+   294188      4 -rw-rw-r--   1  jalberic jalberic      726 Sep 14 20:11 /home/jalberic/proyectos/TFG/sim/ms_sample_hold_top.v
+   251203      4 -rw-rw-r--   1  jalberic jalberic     1074 Oct  1 10:25 /home/jalberic/proyectos/TFG/sim/ms_sample_hold.wdb
+   294323      4 -rw-rw-r--   1  jalberic jalberic      834 Oct  1 08:48 /home/jalberic/proyectos/TFG/sim/ms_sample_hold.conv
+   294317      4 -rw-rw-r--   1  jalberic jalberic       55 Oct  1 10:25 /home/jalberic/proyectos/TFG/sim/ms_sample_hold.id
+   294316      4 -rw-rw-r--   1  jalberic jalberic     1574 Oct  1 10:25 /home/jalberic/proyectos/TFG/sim/ms_sample_hold.chi
+   294315      4 -rw-rw-r--   1  jalberic jalberic      438 Oct  1 10:25 /home/jalberic/proyectos/TFG/sim/ms_sample_hold.errm.log
+   294072      4 -rw-rw-r--   1  jalberic jalberic      147 Sep 14 18:16 /home/jalberic/proyectos/TFG/dut/sample_hold_rnm.sv
+   294102      4 -rw-rw-r--   1  jalberic jalberic      472 Sep 16 18:28 /home/jalberic/proyectos/TFG/dut/SampleHold.va
+
+--- definicion del modulo SampleHold ---
+dut/SampleHold.va
+
+============================================================
+17. HISTORIAL RECIENTE RELEVANTE
+============================================================
+command -v vlog
+command -v vsim
+vlog -sv sumador.sv tb.sv
+vsim -c work.tb -do "run -all; quit"
+command -v vsim
+find "$MGC_AMS_HOME" -type f \( -name vsim -o -name qrun \) 2>/dev/null
+find /eda/SolidoSimulationSuite/solidosim -type f \( -name vsim -o -name qrun \) 2>/dev/null
+command -v vsim
+vsim
+vsim
+which vsim
+vsim -version
+vsim -version
+vsim -c work.tb
+vlog -sv -L uvm tb/uvm_smoke_test.sv
+vlog -sv -L uvm tb/uvm_smoke_test.sv
+vlog -sv -L uvm tb/uvm_smoke_test.sv
+vlog -sv -L uvm burner_test.sv
+vlog -sv -L uvm burner_test.sv
+vsim -c -L uvm tb_top -do "run -all; quit"
+vsim -c tb_top -do "run -all; quit"
+vlog -sv +incdir+. adc_tb_pkg.sv
+vlog -sv +incdir+. adc_tb_pkg.sv
+vlog -sv +incdir+. adc_tb_pkg.sv
+vsim -version
+vsim -c -do "quit -f"
+vlog -sv real_number_test.sv
+vlog -sv real_number_test.sv
+vsim -c work.real_test -do "run -all; quit -f"
+vsim -c work.test_fixture +UVM_TESTNAME=adc_sh_test -do "run -all; quit -f"
+vsim -c work.test_fixture +UVM_TESTNAME=adc_sh_test -do "run -all; quit -f"
+vlog -sv tb/interfaces/adc_gp_interface.sv
+vlog -sv tb/adc_tb_pkg.sv
+vlog -sv dut/sample_hold_rnm.sv
+vlog -sv tb/tb_top.sv
+vlog -sv +incdir+tb tb/adc_tb_pkg.sv
+vlog -sv -E +incdir+tb tb/adc_tb_pkg.sv > /tmp/adc_pkg_preprocessed.sv
+vlog -sv tb/tb_top.sv
+vlog -sv dut/sample_hold_rnm.sv
+vlog -sv sim/test_fixture.sv
+vlog -sv test_fixture.sv
+vsim -c work.test_fixture +UVM_TESTNAME=adc_sh_test -do "run -all; quit -f"
+vlog -sv tb/tb_top.sv
+vlog -sv test_fixture.sv
+vsim -c work.test_fixture +UVM_TESTNAME=adc_sh_test -do "run -all; quit -f"
+vlog -sv +incdir+tb tb/adc_tb_pkg.sv
+vlog -sv tb/tb_top.sv
+vlog -sv test_fixture.sv
+vsim -c work.test_fixture +UVM_TESTNAME=adc_sh_test -do "run -all; quit -f"
+vsim -c work.test_fixture +UVM_TESTNAME=adc_sh_test -do "run -all; quit -f"
+vlog -sv tb/interfaces/adc_gp_interface.sv
+vlog -sv +incdir+tb tb/adc_tb_pkg.sv
+vlog -sv dut/sample_hold_rnm.sv
+vlog -sv tb/tb_top.sv
+vlog -sv test_fixture.sv
+vsim -c work.test_fixture +UVM_TESTNAME=adc_sh_test -do "run -all; quit -f"
+vlog -sv +incdir+tb tb/adc_tb_pkg.sv
+vlog -sv tb/tb_top.sv
+vlog -sv test_fixture.sv
+vsim -c work.test_fixture +UVM_TESTNAME=adc_sh_test -do "run -all; quit -f"
+which valog
+valog -help
+valog -syntax_only +incdir+/eda/SolidoSimulationSuite/solidosim/solidosim/questasim/verilog_src/adms_vlams \
++incdir+/eda/SolidoSimulationSuite/solidosim/solidosim/questasim/verilog_src/adms_vlams \dut/sample_hold.va
+valog -syntax_only +incdir+/eda/SolidoSimulationSuite/solidosim/solidosim/questasim/verilog_src/adms_vlams dut/sample_hold.va
+valog -ams +incdir+/eda/SolidoSimulationSuite/solidosim/solidosim/questasim/verilog_src/adms_vlams dut/sample_hold.va
+valog -syntax_only +incdir+/eda/SolidoSimulationSuite/solidosim/solidosim/questasim/verilog_src/adms_vlams tb/bridges/sample_hold_bridge.svams
+valog -ams -svams +incdir+/eda/SolidoSimulationSuite/solidosim/solidosim/questasim/verilog_src/adms_vlams tb/bridges/sample_hold_bridge.svams
+valog -ams +incdir+/eda/SolidoSimulationSuite/solidosim/solidosim/questasim/verilog_src/adms_vlams tb/bridges/sample_hold_bridge.svams
+valog +incdir+/eda/SolidoSimulationSuite/solidosim/solidosim/questasim/verilog_src/adms_vlams tb/bridges/sample_hold_bridge.vams
+valog /eda/SolidoSimulationSuite/solidosim/solidosim/examples/adms/verilogams_amplifier/src/amplifier.vams
+valog -lrm20 /eda/SolidoSimulationSuite/solidosim/solidosim/examples/adms/verilogams_amplifier/src/amplifier.vams
+grep -Ei "valog|vasim|eldo|vlog|vsim" netlist_va.log
+history | grep -Ei "prueba_veriloga|valog|vasim|eldo"
+grep -Ei "command|eldo|adms|vasim|valog|simulator|version" netlist_va.log
+vlog src/clock_generator.v
+vlog src/driver1.v
+vlog src/driver2.v
+valog src/amplifier.vams
+type -a valog vlog valib vasim
+find /eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2 -name "valog*" -o -name "vasim*" 2>/dev/null
+valog -target_type wreal +incdir+/eda/SolidoSimulationSuite/solidosim/solidosim/questasim/verilog_src/adms_vlams dut/sample_hold.va
+valog -target_type wreal +incdir+/eda/SolidoSimulationSuite/solidosim/solidosim/questasim/verilog_src/adms_vlams dut/sample_hold.va
+vlog -ams sim/ms_sample_hold_top.v
+vasim -c work.ms_sample_hold_top -do "run -all; quit -f"
+vasim -c work.ms_sample_hold_top -do "run -all; quit -f"
+/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/vlog -ams sim/ms_sample_hold_top.v
+valog -target_type wreal +incdir+/eda/SolidoSimulationSuite/solidosim/solidosim/questasim/verilog_src/adms_vlams dut/sample_hold.va
+vasim -c work.ms_sample_hold_top -do "run -all; quit -f"
+vasim -c -cmd sim/ms_sample_hold.cmd work.ms_sample_hold_top -do "run -all; quit -f"
+cat $MGC_AMS_HOME/examples/adms/boundary_elements/vlog_test.cir
+valog -modelsimini modelsim.ini /eda/SolidoSimulationSuite/solidosim/solidosim/examples/adms/verilogams_amplifier/src/amplifier.vams
+vasim -c -cmd sim/ms_sample_hold.cmd work.ms_sample_hold_top -do "run -all; quit -f"
+vasim -c -cmd sim/ms_sample_hold.cmd work.ms_sample_hold_top -do "run -all; quit -f"
+valog -target_type wreal +incdir+/eda/SolidoSimulationSuite/solidosim/solidosim/questasim/verilog_src/adms_vlams dut/sample_hold.va
+$VLOG_AMS -sv tb/interfaces/adc_gp_interface.sv
+VLOG_AMS=/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/vlog
+echo $VLOG_AMS
+$VLOG_AMS -sv tb/interfaces/adc_gp_interface.sv
+$VLOG_AMS -sv +incdir+tb tb/adc_tb_pkg.sv
+$VLOG_AMS -sv tb/tb_top.sv
+$VLOG_AMS -ams test_fixture.sv
+vasim -c -cmd sim/ms_sample_hold.cmd work.test_fixture +UVM_TESTNAME=adc_sh_test -do "run -all; quit -f"
+$VLOG -ams test_fixture.sv
+echo $VLOG_AMS
+$VLOG_AMS -ams test_fixture.sv
+vasim -c -cmd sim/ms_sample_hold.cmd work.test_fixture +UVM_TESTNAME=adc_sh_test -do "run -all; quit -f"
+$VLOG_AMS -sv +incdir+tb tb/adc_tb_pkg.sv
+$VLOG_AMS -sv tb/tb_top.sv
+$VLOG_AMS -ams test_fixture.sv
+vasim -c -cmd sim/ms_sample_hold.cmd work.test_fixture +UVM_TESTNAME=adc_sh_test -do "run -all; quit -f"
+vlog -sv sumador.sv tb.sv
+vsim -c work.tb -do "run -all; quit"
+vsim -c work.tb -do "run -all; quit"
+command -v vlog
+command -v vsim
+vlog -sv sumador.sv tb.sv
+vsim -c work.tb -do "run -all; quit"
+vlog -sv +incdir+/eda/SolidoSimulationSuite/solidosim/solidosim/questasim/verilog_src/uvm-1.1d/src burner.sv
+vlog -sv +incdir+/eda/SolidoSimulationSuite/solidosim/solidosim/questasim/verilog_src/uvm-1.1d/src burner_test.sv
+vlog -sv +incdir+/eda/SolidoSimulationSuite/solidosim/solidosim/questasim/verilog_src/uvm-1.1d/src burner_test.sv
+vlog -sv +incdir+/eda/SolidoSimulationSuite/solidosim/solidosim/questasim/verilog_src/uvm-1.1d/src burner_test.sv
+vsim -c work.tb_top -do "run -all; quit -f"
+VLOG_AMS=/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/vlog
+valog -target_type wreal +incdir+/eda/SolidoSimulationSuite/solidosim/solidosim/questasim/verilog_src/adms_vlams dut/sample_hold.va
+valog -target_type wreal +incdir+/eda/SolidoSimulationSuite/solidosim/solidosim/questasim/verilog_src/adms_vlams dut/SampleHold.va
+$VLOG_AMS -sv tb/interfaces/adc_gp_interface.sv
+$VLOG_AMS -sv +incdir+tb tb/adc_tb_pkg.sv
+VLOG_AMS -sv tb/tb_top.sv
+$VLOG_AMS -sv tb/tb_top.sv
+$VLOG_AMS -ams test_fixture.sv
+vasim -c -cmd sim/ms_sample_hold.cmd work.test_fixture +UVM_TESTNAME=adc_sh_test -do "run -all; quit -f"
+VLOG_AMS=/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/vlog
+valog -target_type wreal +incdir+/eda/SolidoSimulationSuite/solidosim/solidosim/questasim/verilog_src/adms_vlams dut/SampleHold.va
+$VLOG_AMS -sv tb/interfaces/adc_gp_interface.sv
+$VLOG_AMS -sv +incdir+tb tb/adc_tb_pkg.sv
+VLOG_AMS -sv tb/tb_top.sv
+$VLOG_AMS -sv tb/tb_top.sv
+$VLOG_AMS -ams test_fixture.sv
+vasim -c -cmd sim/ms_sample_hold.cmd work.test_fixture +UVM_TESTNAME=adc_sh_test -do "run -all; quit -f"
+vasim -c -cmd sim/ms_sample_hold.cmd work.test_fixture +UVM_TESTNAME=adc_sh_test -do "run -all; quit -f"
+
+============================================================
+18. RESUMEN RAPIDO
+============================================================
+vlog actual: /eda/SolidoSimulationSuite/solidosim/solidosim//questasim/linux_x86_64/vlog
+vasim actual: /eda/SolidoSimulationSuite/solidosim/solidosim//bin/vasim
+adc_top.va existe: NO
+adc_top.v existe:  SI
+
+FIN DEL DIAGNOSTICO

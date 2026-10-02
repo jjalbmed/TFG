@@ -1,0 +1,19 @@
+[VERILOG-AMS Module]
+NAME = SARSequenceRow 
+SOURCE = /home/jalberic/proyectos/TFG/dut/SARSequenceRow.vams 
+LINE = 6
+[Generics]
+[Ports]
+(PORT TERMINAL Reset IN electrical)
+(PORT TERMINAL CLK IN electrical)
+(PORT TERMINAL VDD IN electrical)
+(PORT TERMINAL VSS IN electrical)
+(PORT TERMINAL seq_b7 OUT electrical)
+(PORT TERMINAL seq_b6 OUT electrical)
+(PORT TERMINAL seq_b5 OUT electrical)
+(PORT TERMINAL seq_b4 OUT electrical)
+(PORT TERMINAL seq_b3 OUT electrical)
+(PORT TERMINAL seq_b2 OUT electrical)
+(PORT TERMINAL seq_b1 OUT electrical)
+(PORT TERMINAL seq_b0 OUT electrical)
+(PORT TERMINAL register_clk OUT electrical)

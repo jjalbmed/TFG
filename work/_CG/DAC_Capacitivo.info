@@ -1,0 +1,20 @@
+[VERILOG-AMS Module]
+NAME = DAC_Capacitivo 
+SOURCE = /home/jalberic/proyectos/TFG/dut/DAC_Capacitivo.va 
+LINE = 4
+[Generics]
+( vtrans   real  9.000000e-01  )
+( delay   integer  0  )
+( trans_time   real  1.000000e-12  )
+[Ports]
+(PORT TERMINAL b0 IN electrical)
+(PORT TERMINAL b1 IN electrical)
+(PORT TERMINAL b2 IN electrical)
+(PORT TERMINAL b3 IN electrical)
+(PORT TERMINAL b4 IN electrical)
+(PORT TERMINAL b5 IN electrical)
+(PORT TERMINAL b6 IN electrical)
+(PORT TERMINAL b7 IN electrical)
+(PORT TERMINAL Aout OUT electrical)
+(PORT TERMINAL vdd IN electrical)
+(PORT TERMINAL vss IN electrical)

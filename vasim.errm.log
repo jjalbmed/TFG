@@ -1,0 +1,25 @@
+START report: Mon Sep 14 20:19:30 2026 
+** Note: (vasim-3800) Running Questa ADMS 2026.1 update1 Fri Mar 13 07:49:54 GMT 2026
++   on JOSE Linux x86_64(6.18.33.2-microsoft-standard-WSL2) #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026
+Loading "/eda/SolidoSimulationSuite/solidosim/solidosim/libs/std.standard"
+Loading "/eda/SolidoSimulationSuite/solidosim/solidosim/libs/ieee.std_logic_1164"
+Loading "/home/jalberic/proyectos/TFG/work.SampleHold"
+Loading "/eda/SolidoSimulationSuite/solidosim/solidosim/libs/MGC_AMS.wreal_pkg"
+** Warning: (eldo-107)  NODE "CLK": Less than two connections.
+** Warning: (eldo-107)  NODE "VIN": Less than two connections.
+** Warning: (eldo-107)  NODE "VOUT": Less than two connections.
+** Warning: (eldo-29)  Such messages will not be displayed in future. Set .option MSGNODE = 0 to receive all such warnings.
+** Warning: (eldo-1632)  No analysis specified. Default to transient analysis.
+** Error: (vasim-1402) In file "sim/ms_sample_hold_top.v", line 15: instantiation of dut(SampleHold) failed.
++   Converter insertion failed.
++   No boundary element of type "Real" to Verilog-AMS "electrical" for net CLK, port dut.clk
++   Region: :ms_sample_hold_top
+** Error: (vasim-1402) In file "sim/ms_sample_hold_top.v", line 15: instantiation of dut(SampleHold) failed.
++   Converter insertion failed.
++   No boundary element of type "Real" to Verilog-AMS "electrical" for net VIN, port dut.vin
++   Region: :ms_sample_hold_top
+** Error: (vasim-1402) In file "sim/ms_sample_hold_top.v", line 15: instantiation of dut(SampleHold) failed.
++   Converter insertion failed.
++   No boundary element Verilog-AMS "electrical" to type "Real" for net VOUT, port dut.vout
++   Region: :ms_sample_hold_top
+** Fatal: (vasim-1303) Stop due to previous elaboration failure

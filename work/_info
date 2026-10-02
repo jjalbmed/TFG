@@ -1,10 +1,300 @@
 m255
 K4
 z2
+!s11f vlog 2025.3_2 2025.11, Nov 20 2025
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-d/home/jalberic/proyectos/TFG
+Z0 d/home/jalberic/proyectos/TFG
+Xadc_tb_pkg
+2tb/adc_tb_pkg.sv
+!s115 gp_adc_interface
+Z1 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+Z2 DXx6 mtiUvm 7 uvm_pkg 0 22 2@dUL_lDCUQGm?l9?V^Ge3
+!s110 1790964708
+!i10b 1
+!s100 37MOK;=[?R1n?e@Og?27`1
+I`>S<BlMRJD6F2ZdDV_J^j0
+S1
+R0
+w1790964623
+8tb/adc_tb_pkg.sv
+Ftb/adc_tb_pkg.sv
+F/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh
+F/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh
+F/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh
+F/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh
+F/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh
+F/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh
+F/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh
+F/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh
+F/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh
+F/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh
+F/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh
+F/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh
+Ftb/transactions/adc_transaction.sv
+Ftb/sequences/adc_sequence.sv
+Ftb/sequences/sh_sequence.sv
+Ftb/agent/adc_sequencer.sv
+Ftb/agent/adc_driver.sv
+Ftb/agent/adc_monitor.sv
+Ftb/agent/adc_agent.sv
+Ftb/env/adc_env.sv
+F/home/jalberic/proyectos/TFG/tests/adc_base_test.sv
+F/home/jalberic/proyectos/TFG/tests/adc_sh_test.sv
+F/home/jalberic/proyectos/TFG/tests/adc_sh_sine_test.sv
+F/home/jalberic/proyectos/TFG/tests/adc_comparator_test.sv
+F/home/jalberic/proyectos/TFG/tests/adc_dac_test.sv
+F/home/jalberic/proyectos/TFG/tests/adc_dac_comparator_test.sv
+F/home/jalberic/proyectos/TFG/tests/adc_ff_test.sv
+F/home/jalberic/proyectos/TFG/tests/adc_sar_code_row_test.sv
+F/home/jalberic/proyectos/TFG/tests/adc_sar_sequence_row_test.sv
+!i122 79
+L0 1 0
+V`>S<BlMRJD6F2ZdDV_J^j0
+Z3 OL;L;2025.3_2;82
+r1
+!s85 0
+31
+!s108 1790964707.000000
+!s107 /home/jalberic/proyectos/TFG/tests/adc_sar_sequence_row_test.sv|/home/jalberic/proyectos/TFG/tests/adc_sar_code_row_test.sv|/home/jalberic/proyectos/TFG/tests/adc_ff_test.sv|/home/jalberic/proyectos/TFG/tests/adc_dac_comparator_test.sv|/home/jalberic/proyectos/TFG/tests/adc_dac_test.sv|/home/jalberic/proyectos/TFG/tests/adc_comparator_test.sv|/home/jalberic/proyectos/TFG/tests/adc_sh_sine_test.sv|/home/jalberic/proyectos/TFG/tests/adc_sh_test.sv|/home/jalberic/proyectos/TFG/tests/adc_base_test.sv|tb/env/adc_env.sv|tb/agent/adc_agent.sv|tb/agent/adc_monitor.sv|tb/agent/adc_driver.sv|tb/agent/adc_sequencer.sv|tb/sequences/sh_sequence.sv|tb/sequences/adc_sequence.sv|tb/transactions/adc_transaction.sv|/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|tb/adc_tb_pkg.sv|
+!s90 -sv|+incdir+tb|+incdir+tests|tb/adc_tb_pkg.sv|
+!i113 1
+Z4 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -sv +incdir+tb +incdir+tests -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 tCvgOpt 0 WrealType 1
+vadc_top
+2dut/adc_top.v
+R1
+Z6 DXx6 mtiRnm 11 mgc_rnm_pkg 0 22 YJ3M=Qb?^o7[>eKVYDCf[1
+!s110 1790964696
+!i10b 1
+!s100 OQ6fRzmmkz6P7[aE758m60
+IcT;fB5@h@U?>aM_gPT7le2
+R0
+Z7 w1790964316
+8dut/adc_top.v
+Fdut/adc_top.v
+!i122 77
+L0 6 190
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+R3
+r1
+!s85 0
+31
+!s108 1790964696.000000
+!s107 dut/adc_top.v|
+!s90 -ams|dut/adc_top.v|
+!i113 1
+Z9 o-ams -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+:Comparador
+!s20a 0
+!s209 5
+!s208 gH21_970e]72L5D04oB3K4
+VgH21_970e]72L5D04oB3K4
+!s207 1
+!s206 1790936933
+w1790935226
+Z10 !s205  +ogr  -k 2005 
+!s204 1
+Z11 !s203 5628
+!s202 253
+nComparador
+Fdut/Comparador.va
+R0
+!s201 8
+Z12 !s8d adms
+:DAC_Capacitivo
+!s20a 0
+!s209 5
+!s208 <`90eK323DF3Ab10k_F194
+V<`90eK323DF3Ab10k_F194
+!s207 1
+!s206 1790936937
+w1790936289
+R10
+!s204 1
+!s203 5632
+!s202 253
+nDAC_Capacitivo
+Fdut/DAC_Capacitivo.va
+R0
+!s201 8
+R12
+Ygp_adc_interface
+2tb/interfaces/adc_gp_interface.sv
+R1
+R6
+!s110 1790964669
+!i10b 1
+!s100 9SK3BG37G7AO7S;=V6G_B0
+IfUMHTIWCJP82j[WSK^UID0
+S1
+R0
+R7
+8tb/interfaces/adc_gp_interface.sv
+Ftb/interfaces/adc_gp_interface.sv
+!i122 74
+L0 2 0
+R8
+R3
+r1
+!s85 0
+31
+!s108 1790964669.000000
+!s107 tb/interfaces/adc_gp_interface.sv|
+!s90 -sv|tb/interfaces/adc_gp_interface.sv|
+!i113 1
+R4
+R5
+:IdealFlipFlop
+!s20a 0
+!s209 5
+!s208 _a936jA2H873@:B1c=62k7
+V_a936jA2H873@:B1c=62k7
+!s207 1
+!s206 1790952101
+w1790937764
+R10
+!s204 1
+!s203 5631
+!s202 253
+nIdealFlipFlop
+Fdut/IdealFlipFlop.va
+R0
+!s201 8
+R12
+vms_sample_hold_top
+2sim/ms_sample_hold_top.v
+R1
+R6
+!s110 1790843492
+!i10b 1
+!s100 LPW<Nn=WY0D7M`;Cl28QN1
+IIRY@[i:LOO:Mm]Qd?Cl]?0
+R0
+w1789409516
+8sim/ms_sample_hold_top.v
+Fsim/ms_sample_hold_top.v
+!i122 3
+L0 3 44
+R8
+R3
+r1
+!s85 0
+31
+!s108 1790843492.000000
+!s107 sim/ms_sample_hold_top.v|
+!s90 sim/ms_sample_hold_top.v|
+!i113 1
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+:SampleHold
+!s20a 0
+!s209 5
+!s208 dV60nMF2TBD1Q^F2I021]4
+VdV60nMF2TBD1Q^F2I021]4
+!s207 1
+!s206 1790936927
+w1789576126
+R10
+!s204 1
+R11
+!s202 253
+nSampleHold
+Fdut/SampleHold.va
+R0
+!s201 8
+R12
+:SARCodeRow
+!s20a 0
+!s209 4
+!s208 M2B0eO31Ef10Ic71Fg41R4
+VM2B0eO31Ef10Ic71Fg41R4
+!s207 1
+!s206 1790952107
+w1790951917
+R10
+!s204 1
+!s203 5630
+!s202 253
+nSARCodeRow
+Fdut/SARCodeRow.vams
+R0
+!s201 8
+R12
+:SARSequenceRow
+!s20a 0
+!s209 4
+!s208 _?F1je23Z370B672_U72d4
+V_?F1je23Z370B672_U72d4
+!s207 1
+!s206 1790964642
+R7
+R10
+!s204 1
+!s203 5634
+!s202 253
+nSARSequenceRow
+Fdut/SARSequenceRow.vams
+R0
+!s201 8
+R12
+vtb_top
+2tb/tb_top.sv
+R1
+R2
+DXx4 work 10 adc_tb_pkg 0 22 `>S<BlMRJD6F2ZdDV_J^j0
+R6
+!s110 1790964711
+!i10b 1
+!s100 N5=HK0PQlCF`Fj_CAF@zD3
+IRgeA9aOmczBSac;H]Ie5A3
+S1
+R0
+w1789403606
+8tb/tb_top.sv
+Ftb/tb_top.sv
+!i122 80
+L0 2 22
+R8
+R3
+r1
+!s85 0
+31
+!s108 1790964711.000000
+!s107 tb/tb_top.sv|
+!s90 -sv|tb/tb_top.sv|
+!i113 1
+R4
+R5
+vtest_fixture
+2test_fixture.sv
+R1
+R6
+!s110 1790964699
+!i10b 1
+!s100 PG2S]K3YXcIX4kOBlZ2761
+I]Yn4o4ADmfEJEcP_5[YH:0
+S1
+R0
+R7
+8test_fixture.sv
+Ftest_fixture.sv
+!i122 78
+L0 3 194
+R8
+R3
+r1
+!s85 0
+31
+!s108 1790964699.000000
+!s107 test_fixture.sv|
+!s90 -ams|test_fixture.sv|
+!i113 1
+R9
+R5

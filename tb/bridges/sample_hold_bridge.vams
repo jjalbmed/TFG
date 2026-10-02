@@ -1,0 +1,12 @@
+`include "disciplines.vams"
+
+module sample_hold_bridge(vin_r, vin_a);
+
+    input  wreal      vin_r;
+    output electrical vin_a;
+
+    analog begin
+        V(vin_a) <+ vin_r;
+    end
+
+endmodule

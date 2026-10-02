@@ -1,0 +1,31 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+// Ideal, clocked comparator for the SAR ADC.
+module Comparador(InS, InD, Out, clk);
+
+    parameter real trans_time = 1p;
+    parameter real ret = 0;
+    parameter real clk_threshold = 0.9;
+
+    input InS, InD, clk;
+    output Out;
+
+    electrical Out, InS, InD, clk;
+
+    real result;
+
+    analog begin
+
+        @(cross(V(clk) - clk_threshold, +1)) begin
+            if (V(InS) > V(InD))
+                result = 1;
+            else
+                result = 0;
+        end
+
+        V(Out) <+ transition(result, ret, trans_time);
+
+    end
+
+endmodule

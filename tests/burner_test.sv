@@ -1,8 +1,8 @@
 `include "uvm_macros.svh"
 import uvm_pkg::*;
 
-class burner extends uvm_test; //class define
-    `uvm_component_utils(burner)
+class burner_test extends uvm_test; //class define
+    `uvm_component_utils(burner_test)
 
 //constructor
 
@@ -22,7 +22,7 @@ endclass
 module tb_top;
 
     initial begin
-        run_test("burner");
+        run_test("burner_test");
 
     end
 

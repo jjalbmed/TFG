@@ -1,0 +1,140 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+// Lower SAR register row.  Sequencing signals are supplied externally during
+// this incremental validation stage.
+module SARCodeRow(
+    In,
+    Reset,
+    seq_b7,
+    seq_b6,
+    seq_b5,
+    seq_b4,
+    seq_b3,
+    seq_b2,
+    seq_b1,
+    seq_b0,
+    register_clk,
+    VDD,
+    VSS,
+    b7,
+    b6,
+    b5,
+    b4,
+    b3,
+    b2,
+    b1,
+    b0,
+    b7b,
+    b6b,
+    b5b,
+    b4b,
+    b3b,
+    b2b,
+    b1b,
+    b0b
+);
+
+    input In, Reset;
+    input seq_b7, seq_b6, seq_b5, seq_b4;
+    input seq_b3, seq_b2, seq_b1, seq_b0;
+    input register_clk, VDD, VSS;
+    output b7, b6, b5, b4, b3, b2, b1, b0;
+    output b7b, b6b, b5b, b4b, b3b, b2b, b1b, b0b;
+
+    electrical In, Reset;
+    electrical seq_b7, seq_b6, seq_b5, seq_b4;
+    electrical seq_b3, seq_b2, seq_b1, seq_b0;
+    electrical register_clk, VDD, VSS;
+    electrical b7, b6, b5, b4, b3, b2, b1, b0;
+    electrical b7b, b6b, b5b, b4b, b3b, b2b, b1b, b0b;
+
+    IdealFlipFlop u_ff_b7 (
+        .Set   (seq_b7),
+        .Reset (Reset),
+        .D     (In),
+        .Q     (b7),
+        .QBAR  (b7b),
+        .CLK   (seq_b6),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop u_ff_b6 (
+        .Set   (seq_b6),
+        .Reset (Reset),
+        .D     (In),
+        .Q     (b6),
+        .QBAR  (b6b),
+        .CLK   (seq_b5),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop u_ff_b5 (
+        .Set   (seq_b5),
+        .Reset (Reset),
+        .D     (In),
+        .Q     (b5),
+        .QBAR  (b5b),
+        .CLK   (seq_b4),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop u_ff_b4 (
+        .Set   (seq_b4),
+        .Reset (Reset),
+        .D     (In),
+        .Q     (b4),
+        .QBAR  (b4b),
+        .CLK   (seq_b3),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop u_ff_b3 (
+        .Set   (seq_b3),
+        .Reset (Reset),
+        .D     (In),
+        .Q     (b3),
+        .QBAR  (b3b),
+        .CLK   (seq_b2),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop u_ff_b2 (
+        .Set   (seq_b2),
+        .Reset (Reset),
+        .D     (In),
+        .Q     (b2),
+        .QBAR  (b2b),
+        .CLK   (seq_b1),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop u_ff_b1 (
+        .Set   (seq_b1),
+        .Reset (Reset),
+        .D     (In),
+        .Q     (b1),
+        .QBAR  (b1b),
+        .CLK   (seq_b0),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop u_ff_b0 (
+        .Set   (seq_b0),
+        .Reset (Reset),
+        .D     (In),
+        .Q     (b0),
+        .QBAR  (b0b),
+        .CLK   (register_clk),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+endmodule

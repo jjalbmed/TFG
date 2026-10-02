@@ -1,0 +1,150 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+// Experimental isolated SAR sequencing row.  The sequence is represented as
+// a one-hot token shifted once per rising edge of CLK.
+module SARSequenceRow(
+    Reset,
+    CLK,
+    VDD,
+    VSS,
+    seq_b7,
+    seq_b6,
+    seq_b5,
+    seq_b4,
+    seq_b3,
+    seq_b2,
+    seq_b1,
+    seq_b0,
+    register_clk
+);
+
+    input Reset, CLK, VDD, VSS;
+    output seq_b7, seq_b6, seq_b5, seq_b4;
+    output seq_b3, seq_b2, seq_b1, seq_b0;
+    output register_clk;
+
+    electrical Reset, CLK, VDD, VSS;
+    electrical seq_b7, seq_b6, seq_b5, seq_b4;
+    electrical seq_b3, seq_b2, seq_b1, seq_b0;
+    electrical register_clk;
+
+    electrical start_q;
+    electrical start_qbar;
+    electrical seq_b7_qbar, seq_b6_qbar, seq_b5_qbar, seq_b4_qbar;
+    electrical seq_b3_qbar, seq_b2_qbar, seq_b1_qbar, seq_b0_qbar;
+    electrical register_clk_qbar;
+
+    // Set and Reset intentionally share Reset: Set has priority in
+    // IdealFlipFlop, so START is high while Reset is asserted.
+    IdealFlipFlop FF_START (
+        .Set   (Reset),
+        .Reset (Reset),
+        .D     (VSS),
+        .Q     (start_q),
+        .QBAR  (start_qbar),
+        .CLK   (CLK),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop FF_SEQ_B7 (
+        .Set   (VSS),
+        .Reset (Reset),
+        .D     (start_q),
+        .Q     (seq_b7),
+        .QBAR  (seq_b7_qbar),
+        .CLK   (CLK),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop FF_SEQ_B6 (
+        .Set   (VSS),
+        .Reset (Reset),
+        .D     (seq_b7),
+        .Q     (seq_b6),
+        .QBAR  (seq_b6_qbar),
+        .CLK   (CLK),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop FF_SEQ_B5 (
+        .Set   (VSS),
+        .Reset (Reset),
+        .D     (seq_b6),
+        .Q     (seq_b5),
+        .QBAR  (seq_b5_qbar),
+        .CLK   (CLK),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop FF_SEQ_B4 (
+        .Set   (VSS),
+        .Reset (Reset),
+        .D     (seq_b5),
+        .Q     (seq_b4),
+        .QBAR  (seq_b4_qbar),
+        .CLK   (CLK),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop FF_SEQ_B3 (
+        .Set   (VSS),
+        .Reset (Reset),
+        .D     (seq_b4),
+        .Q     (seq_b3),
+        .QBAR  (seq_b3_qbar),
+        .CLK   (CLK),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop FF_SEQ_B2 (
+        .Set   (VSS),
+        .Reset (Reset),
+        .D     (seq_b3),
+        .Q     (seq_b2),
+        .QBAR  (seq_b2_qbar),
+        .CLK   (CLK),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop FF_SEQ_B1 (
+        .Set   (VSS),
+        .Reset (Reset),
+        .D     (seq_b2),
+        .Q     (seq_b1),
+        .QBAR  (seq_b1_qbar),
+        .CLK   (CLK),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop FF_SEQ_B0 (
+        .Set   (VSS),
+        .Reset (Reset),
+        .D     (seq_b1),
+        .Q     (seq_b0),
+        .QBAR  (seq_b0_qbar),
+        .CLK   (CLK),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop FF_REGISTER_CLK (
+        .Set   (VSS),
+        .Reset (Reset),
+        .D     (seq_b0),
+        .Q     (register_clk),
+        .QBAR  (register_clk_qbar),
+        .CLK   (CLK),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+endmodule

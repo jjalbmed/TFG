@@ -1,0 +1,216 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+module SARLogic (
+    CLK, In, VDD, VSS,
+    b0, b1, b2, b3, b4, b5, b6, b7,
+    register_clk, sample_clk
+);
+
+    input CLK, In, VDD, VSS;
+
+    output b0, b1, b2, b3, b4, b5, b6, b7;
+    output register_clk, sample_clk;
+
+    electrical CLK, In, VDD, VSS;
+    electrical b0, b1, b2, b3, b4, b5, b6, b7;
+    electrical register_clk, sample_clk;
+
+    // Nodos internos del secuenciador
+    electrical net2, net5;
+    electrical net32, net42, net47, net51;
+    electrical net60, net72, net75, net84;
+    electrical net162;
+
+    // QBAR no utilizados funcionalmente
+    electrical net10, net31, net40, net177;
+    electrical net50, net59, net116;
+    electrical net74, net83, net108;
+    electrical net92, net100, net124;
+    electrical net132, net142, net149;
+    electrical net156, net163, net170;
+
+    parameter real vtrans = 0.9;
+    parameter real gate_delay = 0;
+    parameter real gate_trans = 10p;
+
+
+    // ============================================================
+    // AND + NOT
+    //
+    // sample_clk = net2 AND CLK
+    // net5       = NOT(sample_clk)
+    // ============================================================
+integer restart_seq;
+
+analog begin
+
+    @(initial_step)
+        restart_seq = 1;
+
+    // Esperar a que register_clk termine su pulso
+    @(cross(V(register_clk) - vtrans, -1))
+        restart_seq = 1;
+
+    // Liberar el secuenciador en el siguiente flanco de bajada de CLK
+    @(cross(V(CLK) - vtrans, -1))
+        if (restart_seq)
+            restart_seq = 0;
+
+    V(net5) <+ transition(
+        restart_seq ? V(VDD) : V(VSS),
+        0,
+        1p
+    );
+
+    V(sample_clk) <+ transition(
+    ((restart_seq == 1) && (V(CLK) > vtrans))
+        ? V(VDD)
+        : V(VSS),
+    gate_delay,
+    gate_trans
+    );
+
+end
+
+
+    // ============================================================
+    // SECUENCIADOR
+    // net2 -> net32 -> net42 -> net47 -> net51
+    //      -> net60 -> net72 -> net75 -> net84 -> register_clk
+    // ============================================================
+
+    IdealFlipFlop I0 (
+        net5, VSS, VSS,
+        net2, net10,
+        CLK, VDD, VSS
+    );
+
+    IdealFlipFlop I1 (
+        VSS, net5, net2,
+        net32, net31,
+        CLK, VDD, VSS
+    );
+
+    IdealFlipFlop I2 (
+        VSS, net5, net32,
+        net42, net40,
+        CLK, VDD, VSS
+    );
+
+    IdealFlipFlop I5 (
+        VSS, net5, net42,
+        net47, net177,
+        CLK, VDD, VSS
+    );
+
+    IdealFlipFlop I3 (
+        VSS, net5, net47,
+        net51, net50,
+        CLK, VDD, VSS
+    );
+
+    IdealFlipFlop I4 (
+        VSS, net5, net51,
+        net60, net59,
+        CLK, VDD, VSS
+    );
+
+    IdealFlipFlop I11 (
+        VSS, net5, net60,
+        net72, net116,
+        CLK, VDD, VSS
+    );
+
+    IdealFlipFlop I6 (
+        VSS, net5, net72,
+        net75, net74,
+        CLK, VDD, VSS
+    );
+
+    IdealFlipFlop I7 (
+        VSS, net5, net75,
+        net84, net83,
+        CLK, VDD, VSS
+    );
+
+    IdealFlipFlop I10 (
+        VSS, net5, net84,
+        register_clk, net108,
+        CLK, VDD, VSS
+    );
+
+
+    // ============================================================
+    // FLIP-FLOPS SAR
+    // ============================================================
+
+    // b7
+    IdealFlipFlop I8 (
+        net32, sample_clk, In,
+        b7, net92,
+        b6, VDD, VSS
+    );
+
+    // b6
+    IdealFlipFlop I9 (
+        net42, sample_clk, In,
+        b6, net100,
+        b5, VDD, VSS
+    );
+
+    // b5
+    IdealFlipFlop I12 (
+        net47, sample_clk, In,
+        b5, net124,
+        b4, VDD, VSS
+    );
+
+    // b4
+    IdealFlipFlop I13 (
+        net51, sample_clk, In,
+        b4, net132,
+        b3, VDD, VSS
+    );
+
+    // b3
+    IdealFlipFlop I14 (
+        net60, sample_clk, In,
+        b3, net142,
+        b2, VDD, VSS
+    );
+
+    // b2
+    IdealFlipFlop I15 (
+        net72, sample_clk, In,
+        b2, net149,
+        b1, VDD, VSS
+    );
+
+    // b1
+    IdealFlipFlop I16 (
+        net75, sample_clk, In,
+        b1, net156,
+        b0, VDD, VSS
+    );
+
+    // b0
+    IdealFlipFlop I17 (
+        net84, sample_clk, In,
+        b0, net163,
+        net162, VDD, VSS
+    );
+
+
+    // ============================================================
+    // FLANCO FINAL PARA b0
+    // ============================================================
+
+    IdealFlipFlop I18 (
+        register_clk, sample_clk, VSS,
+        net162, net170,
+        VSS, VDD, VSS
+    );
+
+endmodule
+

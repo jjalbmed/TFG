@@ -1,0 +1,10 @@
+[VERILOG-AMS Module]
+NAME = ADC_SARR_debug_monitor 
+SOURCE = /home/jalberic/proyectos/TFG/dut/ADC_SARR_debug_monitor.vams 
+LINE = 5
+[Generics]
+[Ports]
+(PORT TERMINAL cmp_out IN electrical)
+(PORT TERMINAL b0 IN electrical)
+(PORT TERMINAL eoc IN electrical)
+(PORT TERMINAL o0 IN electrical)

@@ -1,0 +1,102 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+// Structural upper row of IdealSARLogic.  The names of the internal nodes are
+// retained from the extracted netlist so the control chain can be audited
+// directly against that reference.
+module SARSequenceRow(
+    CLK, VDD, VSS, sample_clk, net2, net32, net42, net47, net51,
+    net60, net72, net75, net84, register_clk
+);
+    input CLK, VDD, VSS;
+    output sample_clk, net2, net32, net42, net47, net51;
+    output net60, net72, net75, net84, register_clk;
+    electrical CLK, VDD, VSS;
+    electrical sample_clk, net2, net32, net42, net47, net51;
+    electrical net60, net72, net75, net84, register_clk;
+    electrical net5;
+    electrical net2_qbar, net32_qbar, net42_qbar, net47_qbar, net51_qbar;
+    electrical net60_qbar, net72_qbar, net75_qbar, net84_qbar;
+    electrical register_clk_qbar;
+
+    // I59 and I58 from the original netlist.
+    Not I59 (
+        .In  (sample_clk),
+        .Out (net5),
+        .VDD (VDD),
+        .VSS (VSS)
+    );
+
+    AND_Ideal #(
+        .vtrans     (0.9),
+        .VDD        (1.8),
+        .VSS        (0.0)
+    ) I58 (
+        .Out (sample_clk),
+        .In1 (net2),
+        .In2 (CLK)
+    );
+
+    // Temporary observational instrumentation: no electrical contribution.
+    analog begin
+        @(cross(V(CLK) - 0.9, +1)) begin
+            $display(
+                "[SAR_SEQ_DEBUG] t=%0.3e CLK=%0.6f sample_clk=%0.6f net5=%0.6f net2=%0.6f net32=%0.6f net42=%0.6f net47=%0.6f net51=%0.6f net60=%0.6f net72=%0.6f net75=%0.6f net84=%0.6f register_clk=%0.6f",
+                $abstime,
+                V(CLK),
+                V(sample_clk),
+                V(net5),
+                V(net2),
+                V(net32),
+                V(net42),
+                V(net47),
+                V(net51),
+                V(net60),
+                V(net72),
+                V(net75),
+                V(net84),
+                V(register_clk)
+            );
+        end
+    end
+
+    IdealFlipFlop I0 (.Set(net5), .Reset(VSS), .D(VSS), .Q(net2), .QBAR(net2_qbar), .CLK(CLK), .VDD(VDD), .VSS(VSS));
+    IdealFlipFlop I1 (.Set(VSS), .Reset(net5), .D(net2), .Q(net32), .QBAR(net32_qbar), .CLK(CLK), .VDD(VDD), .VSS(VSS));
+    IdealFlipFlop I2 (.Set(VSS), .Reset(net5), .D(net32), .Q(net42), .QBAR(net42_qbar), .CLK(CLK), .VDD(VDD), .VSS(VSS));
+    IdealFlipFlop I3 (.Set(VSS), .Reset(net5), .D(net42), .Q(net47), .QBAR(net47_qbar), .CLK(CLK), .VDD(VDD), .VSS(VSS));
+    IdealFlipFlop I4 (.Set(VSS), .Reset(net5), .D(net47), .Q(net51), .QBAR(net51_qbar), .CLK(CLK), .VDD(VDD), .VSS(VSS));
+    IdealFlipFlop I5 (.Set(VSS), .Reset(net5), .D(net51), .Q(net60), .QBAR(net60_qbar), .CLK(CLK), .VDD(VDD), .VSS(VSS));
+    IdealFlipFlop I6 (.Set(VSS), .Reset(net5), .D(net60), .Q(net72), .QBAR(net72_qbar), .CLK(CLK), .VDD(VDD), .VSS(VSS));
+    IdealFlipFlop I7 (.Set(VSS), .Reset(net5), .D(net72), .Q(net75), .QBAR(net75_qbar), .CLK(CLK), .VDD(VDD), .VSS(VSS));
+    IdealFlipFlop I8 (.Set(VSS), .Reset(net5), .D(net75), .Q(net84), .QBAR(net84_qbar), .CLK(CLK), .VDD(VDD), .VSS(VSS));
+    IdealFlipFlop I9 (.Set(VSS), .Reset(net5), .D(net84), .Q(register_clk), .QBAR(register_clk_qbar), .CLK(CLK), .VDD(VDD), .VSS(VSS));
+endmodule
+
+// Contract from the extracted netlist: Not(In, Out, VDD, VSS).
+module Not(In, Out, VDD, VSS);
+    parameter real vtrans = 0.9;
+
+    input In, VDD, VSS;
+    output Out;
+    electrical In, Out, VDD, VSS;
+
+    analog begin
+        V(Out, VSS) <+ (V(In) > vtrans ? 0.0 : V(VDD, VSS));
+    end
+endmodule
+
+// I58 has the three terminals (Out, In1, In2); VDD and VSS are netlist
+// parameters, not terminals.
+module AND_Ideal(Out, In1, In2);
+    parameter real vtrans = 0.9;
+    parameter real VDD = 1.8;
+    parameter real VSS = 0.0;
+
+    input In1, In2;
+    output Out;
+    electrical In1, In2, Out;
+
+    analog begin
+        V(Out) <+ ((V(In1) > vtrans && V(In2) > vtrans) ? VDD : VSS);
+    end
+endmodule

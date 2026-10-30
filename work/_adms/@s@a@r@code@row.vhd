@@ -7,15 +7,15 @@ USE STD.ALL;
 ENTITY SARCodeRow IS
   PORT (
     SIGNAL \In\ : IN real;
-    SIGNAL Reset : IN real;
-    SIGNAL seq_b7 : IN real;
-    SIGNAL seq_b6 : IN real;
-    SIGNAL seq_b5 : IN real;
-    SIGNAL seq_b4 : IN real;
-    SIGNAL seq_b3 : IN real;
-    SIGNAL seq_b2 : IN real;
-    SIGNAL seq_b1 : IN real;
-    SIGNAL seq_b0 : IN real;
+    SIGNAL sample_clk : IN real;
+    SIGNAL net32 : IN real;
+    SIGNAL net42 : IN real;
+    SIGNAL net47 : IN real;
+    SIGNAL net51 : IN real;
+    SIGNAL net60 : IN real;
+    SIGNAL net72 : IN real;
+    SIGNAL net75 : IN real;
+    SIGNAL net84 : IN real;
     SIGNAL register_clk : IN real;
     SIGNAL VDD : IN real;
     SIGNAL VSS : IN real;

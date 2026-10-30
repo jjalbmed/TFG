@@ -5,18 +5,19 @@ use ieee.upf.all;
 
 entity SARSequenceRow is
   PORT (
-    signal Reset : IN real;
     signal CLK : IN real;
     signal VDD : IN real;
     signal VSS : IN real;
-    signal seq_b7 : OUT real;
-    signal seq_b6 : OUT real;
-    signal seq_b5 : OUT real;
-    signal seq_b4 : OUT real;
-    signal seq_b3 : OUT real;
-    signal seq_b2 : OUT real;
-    signal seq_b1 : OUT real;
-    signal seq_b0 : OUT real;
+    signal sample_clk : OUT real;
+    signal net2 : OUT real;
+    signal net32 : OUT real;
+    signal net42 : OUT real;
+    signal net47 : OUT real;
+    signal net51 : OUT real;
+    signal net60 : OUT real;
+    signal net72 : OUT real;
+    signal net75 : OUT real;
+    signal net84 : OUT real;
     signal register_clk : OUT real);
 end entity SARSequenceRow;
 

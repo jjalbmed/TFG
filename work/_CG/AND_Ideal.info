@@ -1,0 +1,12 @@
+[VERILOG-AMS Module]
+NAME = AND_Ideal 
+SOURCE = /home/jalberic/proyectos/TFG/dut/SARSequenceRow.va 
+LINE = 90
+[Generics]
+( vtrans   real  9.000000e-01  )
+( VDD   real  1.800000e+00  )
+( VSS   real  0.000000e+00  )
+[Ports]
+(PORT TERMINAL Out OUT electrical)
+(PORT TERMINAL In1 IN electrical)
+(PORT TERMINAL In2 IN electrical)

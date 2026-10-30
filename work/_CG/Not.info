@@ -1,0 +1,11 @@
+[VERILOG-AMS Module]
+NAME = Not 
+SOURCE = /home/jalberic/proyectos/TFG/dut/SARSequenceRow.va 
+LINE = 76
+[Generics]
+( vtrans   real  9.000000e-01  )
+[Ports]
+(PORT TERMINAL In IN electrical)
+(PORT TERMINAL Out OUT electrical)
+(PORT TERMINAL VDD IN electrical)
+(PORT TERMINAL VSS IN electrical)

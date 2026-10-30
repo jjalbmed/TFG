@@ -6,15 +6,15 @@ use ieee.upf.all;
 entity SARCodeRow is
   PORT (
     signal \In\ : IN real;
-    signal Reset : IN real;
-    signal seq_b7 : IN real;
-    signal seq_b6 : IN real;
-    signal seq_b5 : IN real;
-    signal seq_b4 : IN real;
-    signal seq_b3 : IN real;
-    signal seq_b2 : IN real;
-    signal seq_b1 : IN real;
-    signal seq_b0 : IN real;
+    signal sample_clk : IN real;
+    signal net32 : IN real;
+    signal net42 : IN real;
+    signal net47 : IN real;
+    signal net51 : IN real;
+    signal net60 : IN real;
+    signal net72 : IN real;
+    signal net75 : IN real;
+    signal net84 : IN real;
     signal register_clk : IN real;
     signal VDD : IN real;
     signal VSS : IN real;

@@ -203,16 +203,7 @@ class adc_monitor extends uvm_monitor;
                         tr.conversion_done = 1'b1;
 
 
-                        `uvm_info(
-                            "MON",
-                            $sformatf(
-                                "ADC conversion: Vin = %0.3f V | Code = 0x%02h | Vout = %0.3f V",
-                                tr.vin,
-                                tr.adc_code,
-                                tr.vout
-                            ),
-                            UVM_LOW
-                        )
+                        `uvm_info("MON", $sformatf("ADC conversion: Vin = %0.3f V | Code = 0x%02h | Vout = %0.3f V", tr.vin, tr.adc_code, tr.vout), UVM_LOW)
 
 
                         ap.write(tr);
@@ -241,8 +232,7 @@ class adc_monitor extends uvm_monitor;
                     end
 
 
-                    previous_register_clk =
-                        current_register_clk;
+                    previous_register_clk = current_register_clk;
 
                 end
 

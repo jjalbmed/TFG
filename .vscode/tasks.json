@@ -1,0 +1,39 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Lint UVM - Questa",
+            "type": "shell",
+            "command": "vlog",
+            "args": [
+                "-sv",
+                "+incdir+/home/jalberic/proyectos/TFG/tb",
+                "+incdir+/home/jalberic/proyectos/TFG/tests",
+                "/home/jalberic/proyectos/TFG/tb/adc_tb_pkg.sv"
+            ],
+            "options": {
+                "cwd": "/home/jalberic/proyectos/TFG"
+            },
+            "problemMatcher": {
+                "owner": "systemverilog",
+                "fileLocation": "absolute",
+                "pattern": {
+                    "regexp": "^\\*\\* (Error|Warning): (?:\\([^)]*\\) )?(.+)\\((\\d+)\\): (.*)$",
+                    "severity": 1,
+                    "file": 2,
+                    "line": 3,
+                    "message": 4
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared",
+                "clear": true
+            }
+        }
+    ]
+}

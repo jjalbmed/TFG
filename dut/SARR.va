@@ -1,0 +1,126 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+// Structural SAR result register.  All eight result bits are captured by the
+// common end-of-conversion clock.
+module SARR(
+    b7,
+    b6,
+    b5,
+    b4,
+    b3,
+    b2,
+    b1,
+    b0,
+    EOC,
+    VDD,
+    VSS,
+    o7,
+    o6,
+    o5,
+    o4,
+    o3,
+    o2,
+    o1,
+    o0
+);
+
+    input b7, b6, b5, b4, b3, b2, b1, b0;
+    input EOC, VDD, VSS;
+    output o7, o6, o5, o4, o3, o2, o1, o0;
+
+    electrical b7, b6, b5, b4, b3, b2, b1, b0;
+    electrical EOC, VDD, VSS;
+    electrical o7, o6, o5, o4, o3, o2, o1, o0;
+
+    electrical o7b, o6b, o5b, o4b, o3b, o2b, o1b, o0b;
+
+    IdealFlipFlop FF7 (
+        .Set   (VSS),
+        .Reset (VSS),
+        .D     (b7),
+        .Q     (o7),
+        .QBAR  (o7b),
+        .CLK   (EOC),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop FF6 (
+        .Set   (VSS),
+        .Reset (VSS),
+        .D     (b6),
+        .Q     (o6),
+        .QBAR  (o6b),
+        .CLK   (EOC),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop FF5 (
+        .Set   (VSS),
+        .Reset (VSS),
+        .D     (b5),
+        .Q     (o5),
+        .QBAR  (o5b),
+        .CLK   (EOC),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop FF4 (
+        .Set   (VSS),
+        .Reset (VSS),
+        .D     (b4),
+        .Q     (o4),
+        .QBAR  (o4b),
+        .CLK   (EOC),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop FF3 (
+        .Set   (VSS),
+        .Reset (VSS),
+        .D     (b3),
+        .Q     (o3),
+        .QBAR  (o3b),
+        .CLK   (EOC),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop FF2 (
+        .Set   (VSS),
+        .Reset (VSS),
+        .D     (b2),
+        .Q     (o2),
+        .QBAR  (o2b),
+        .CLK   (EOC),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop FF1 (
+        .Set   (VSS),
+        .Reset (VSS),
+        .D     (b1),
+        .Q     (o1),
+        .QBAR  (o1b),
+        .CLK   (EOC),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+    IdealFlipFlop FF0 (
+        .Set   (VSS),
+        .Reset (VSS),
+        .D     (b0),
+        .Q     (o0),
+        .QBAR  (o0b),
+        .CLK   (EOC),
+        .VDD   (VDD),
+        .VSS   (VSS)
+    );
+
+endmodule

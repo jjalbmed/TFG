@@ -1,0 +1,23 @@
+[VERILOG-AMS Module]
+NAME = SARLogic 
+SOURCE = /home/jalberic/proyectos/TFG/dut/SARLogic.va 
+LINE = 4
+[Generics]
+( vtrans   real  9.000000e-01  )
+( gate_delay   integer  0  )
+( gate_trans   real  1.000000e-11  )
+[Ports]
+(PORT TERMINAL CLK IN electrical)
+(PORT TERMINAL In IN electrical)
+(PORT TERMINAL VDD IN electrical)
+(PORT TERMINAL VSS IN electrical)
+(PORT TERMINAL b0 OUT electrical)
+(PORT TERMINAL b1 OUT electrical)
+(PORT TERMINAL b2 OUT electrical)
+(PORT TERMINAL b3 OUT electrical)
+(PORT TERMINAL b4 OUT electrical)
+(PORT TERMINAL b5 OUT electrical)
+(PORT TERMINAL b6 OUT electrical)
+(PORT TERMINAL b7 OUT electrical)
+(PORT TERMINAL register_clk OUT electrical)
+(PORT TERMINAL sample_clk OUT electrical)

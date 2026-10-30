@@ -1,0 +1,36 @@
+Stack Trace Dump
+Program = /eda/SolidoSimulationSuite/solidosim/solidosim/aol/bin/vams_ms_64 (v26.1_1.1"Beta")
+Date = Wed Oct  7 16:43:06 2026
+# Level    PC      Function Name+offset  filename
+#====================================================
+#   0  0x00000000020b6487: <unknown @0x20b6487>
+#   1  0x00000000020b6596: adms_dump_callstack+0xe6 [vams_ms_64]
+#   2  0x0000000000abaeb9: <unknown @0xabaeb9>
+#   3  0x0000155547212990: +0x12990 [libpthread.so.0]
+#   4  0x0000154532244ccc: <unknown @0x154532244ccc>
+# End of Stack Trace
+
+Stack Trace Dump
+Program = /eda/SolidoSimulationSuite/solidosim/solidosim/aol/bin/vams_ms_64 (v26.1_1.1"Beta")
+Date = Wed Oct  7 16:53:35 2026
+# Level    PC      Function Name+offset  filename
+#====================================================
+#   0  0x00000000020b6487: <unknown @0x20b6487>
+#   1  0x00000000020b6596: adms_dump_callstack+0xe6 [vams_ms_64]
+#   2  0x0000000000abaeb9: <unknown @0xabaeb9>
+#   3  0x0000155547212990: +0x12990 [libpthread.so.0]
+#   4  0x0000154532244ccc: <unknown @0x154532244ccc>
+# End of Stack Trace
+
+Stack Trace Dump
+Program = /eda/SolidoSimulationSuite/solidosim/solidosim/aol/bin/vams_ms_64 (v26.1_1.1"Beta")
+Date = Wed Oct  7 16:57:20 2026
+# Level    PC      Function Name+offset  filename
+#====================================================
+#   0  0x00000000020b6487: <unknown @0x20b6487>
+#   1  0x00000000020b6596: adms_dump_callstack+0xe6 [vams_ms_64]
+#   2  0x0000000000abaeb9: <unknown @0xabaeb9>
+#   3  0x0000155547212990: +0x12990 [libpthread.so.0]
+#   4  0x0000154532244ccc: <unknown @0x154532244ccc>
+# End of Stack Trace
+

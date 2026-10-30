@@ -1,4 +1,10 @@
 `timescale 1ns/1ps
+
+import uvm_pkg::*;
+import adc_tb_pkg::*;
+`include "uvm_macros.svh"
+
+`include "/home/jalberic/proyectos/TFG/tests/adc_sar_logic_test.sv"
 module tb_top(gp_adc_interface intf);
 
     import uvm_pkg::*;

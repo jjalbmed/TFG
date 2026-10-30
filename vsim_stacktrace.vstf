@@ -1,0 +1,147 @@
+# Current time Wed Oct  7 16:43:06 2026
+# Program = vsim
+# Id = "2025.3_2"
+# Version = "2025.11"
+# Date = "Nov 20 2025"
+# Platform = "linux_x86_64"
+# Signature = f2ab170e845d0ea62ee6c9d252b89eb1
+# 0    0x0000154532244ccc: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_port_base.svh:431'
+# 1    0x0000154532247c54: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_port_base.svh:431'
+# 2    0x0000154530f915de: 'tb/env/adc_env.sv:26'
+# 3    0x0000154531dd19d6: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_common_phases.svh:96'
+# 4    0x0000154531dccf27: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_bottomup_phase.svh:108'
+# 5    0x0000154531dcc50f: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_bottomup_phase.svh:81'
+# 6    0x0000154531dcbc0b: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_bottomup_phase.svh:61'
+# 7    0x0000154531dcbc0b: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_bottomup_phase.svh:61'
+# 8    0x0000154531dbd8df: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_phase.svh:1156'
+# 9    0x0000154531dbc58a: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_phase.svh:1847'
+# 10   0x00001555522d64e9: '<unknown (@0x1555522d64e9)>'
+# 11   0x000015554e2bc1aa: '<unknown (@0x15554e2bc1aa)>'
+# 12   0x000015554df8b4df: '<unknown (@0x15554df8b4df)>'
+# 13   0x000015554e315ad9: '<unknown (@0x15554e315ad9)>'
+# 14   0x000015554e9999b8: '<unknown (@0x15554e9999b8)>'
+# --> START OF USERCODE
+# 15   0x000015554e7218cf: 'mti_Run + 0x00000000000000bf' in '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/libvsimnotcl.so'
+# <-- END OF USERCODE
+# 16   0x0000000000b6a19a: '<unknown (@0xb6a19a)>'
+# 17   0x0000000000b6d36b: '<unknown (@0xb6d36b)>'
+# 18   0x0000000000b715b5: '<unknown (@0xb715b5)>'
+# 19   0x0000000000b418cf: '<unknown (@0xb418cf)>'
+# 20   0x0000000001ec315a: '<unknown (@0x1ec315a)>'
+# 21   0x0000000002b3fd06: '<unknown (@0x2b3fd06)>'
+# 22   0x0000000002b409a8: '<unknown (@0x2b409a8)>'
+# 23   0x0000000002b40d06: '<unknown (@0x2b40d06)>'
+# 24   0x000015554efc4303: '<unknown (@0x15554efc4303)>'
+# 25   0x0000000002bdfac0: '<unknown (@0x2bdfac0)>'
+# 26   0x0000000002c341d1: '<unknown (@0x2c341d1)>'
+# 27   0x0000000002bf7f1d: '<unknown (@0x2bf7f1d)>'
+# 28   0x0000000002bf8251: '<unknown (@0x2bf8251)>'
+# 29   0x0000000001ef9472: '<unknown (@0x1ef9472)>'
+# 30   0x0000000001ef2999: '<unknown (@0x1ef2999)>'
+# 31   0x0000000001ee960b: '<unknown (@0x1ee960b)>'
+# 32   0x0000000000b3d18c: '<unknown (@0xb3d18c)>'
+# 33   0x0000000000ae8689: '<unknown (@0xae8689)>'
+# 34   0x00000000011b996e: '<unknown (@0x11b996e)>'
+# 35   0x0000000000a4d6f6: '<unknown (@0xa4d6f6)>'
+# 36   0x0000155541e3a865: '__libc_start_main + 0x00000000000000e5' in '/lib64/libc.so.6'
+# End of Stack Trace
+
+
+# Current time Wed Oct  7 16:53:35 2026
+# Program = vsim
+# Id = "2025.3_2"
+# Version = "2025.11"
+# Date = "Nov 20 2025"
+# Platform = "linux_x86_64"
+# Signature = f2ab170e845d0ea62ee6c9d252b89eb1
+# 0    0x0000154532244ccc: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_port_base.svh:431'
+# 1    0x0000154532247c54: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_port_base.svh:431'
+# 2    0x0000154530f915de: 'tb/env/adc_env.sv:26'
+# 3    0x0000154531dd19d6: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_common_phases.svh:96'
+# 4    0x0000154531dccf27: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_bottomup_phase.svh:108'
+# 5    0x0000154531dcc50f: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_bottomup_phase.svh:81'
+# 6    0x0000154531dcbc0b: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_bottomup_phase.svh:61'
+# 7    0x0000154531dcbc0b: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_bottomup_phase.svh:61'
+# 8    0x0000154531dbd8df: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_phase.svh:1156'
+# 9    0x0000154531dbc58a: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_phase.svh:1847'
+# 10   0x00001555522d64e9: '<unknown (@0x1555522d64e9)>'
+# 11   0x000015554e2bc1aa: '<unknown (@0x15554e2bc1aa)>'
+# 12   0x000015554df8b4df: '<unknown (@0x15554df8b4df)>'
+# 13   0x000015554e315ad9: '<unknown (@0x15554e315ad9)>'
+# 14   0x000015554e9999b8: '<unknown (@0x15554e9999b8)>'
+# --> START OF USERCODE
+# 15   0x000015554e7218cf: 'mti_Run + 0x00000000000000bf' in '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/libvsimnotcl.so'
+# <-- END OF USERCODE
+# 16   0x0000000000b6a19a: '<unknown (@0xb6a19a)>'
+# 17   0x0000000000b6d36b: '<unknown (@0xb6d36b)>'
+# 18   0x0000000000b715b5: '<unknown (@0xb715b5)>'
+# 19   0x0000000000b418cf: '<unknown (@0xb418cf)>'
+# 20   0x0000000001ec315a: '<unknown (@0x1ec315a)>'
+# 21   0x0000000002b3fd06: '<unknown (@0x2b3fd06)>'
+# 22   0x0000000002b409a8: '<unknown (@0x2b409a8)>'
+# 23   0x0000000002b40d06: '<unknown (@0x2b40d06)>'
+# 24   0x000015554efc4303: '<unknown (@0x15554efc4303)>'
+# 25   0x0000000002bdfac0: '<unknown (@0x2bdfac0)>'
+# 26   0x0000000002c341d1: '<unknown (@0x2c341d1)>'
+# 27   0x0000000002bf7f1d: '<unknown (@0x2bf7f1d)>'
+# 28   0x0000000002bf8251: '<unknown (@0x2bf8251)>'
+# 29   0x0000000001ef9472: '<unknown (@0x1ef9472)>'
+# 30   0x0000000001ef2999: '<unknown (@0x1ef2999)>'
+# 31   0x0000000001ee960b: '<unknown (@0x1ee960b)>'
+# 32   0x0000000000b3d18c: '<unknown (@0xb3d18c)>'
+# 33   0x0000000000ae8689: '<unknown (@0xae8689)>'
+# 34   0x00000000011b996e: '<unknown (@0x11b996e)>'
+# 35   0x0000000000a4d6f6: '<unknown (@0xa4d6f6)>'
+# 36   0x0000155541e3a865: '__libc_start_main + 0x00000000000000e5' in '/lib64/libc.so.6'
+# End of Stack Trace
+
+
+# Current time Wed Oct  7 16:57:21 2026
+# Program = vsim
+# Id = "2025.3_2"
+# Version = "2025.11"
+# Date = "Nov 20 2025"
+# Platform = "linux_x86_64"
+# Signature = f2ab170e845d0ea62ee6c9d252b89eb1
+# 0    0x0000154532244ccc: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_port_base.svh:431'
+# 1    0x0000154532247c54: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_port_base.svh:431'
+# 2    0x0000154530f915de: 'tb/env/adc_env.sv:26'
+# 3    0x0000154531dd19d6: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_common_phases.svh:96'
+# 4    0x0000154531dccf27: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_bottomup_phase.svh:108'
+# 5    0x0000154531dcc50f: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_bottomup_phase.svh:81'
+# 6    0x0000154531dcbc0b: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_bottomup_phase.svh:61'
+# 7    0x0000154531dcbc0b: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_bottomup_phase.svh:61'
+# 8    0x0000154531dbd8df: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_phase.svh:1156'
+# 9    0x0000154531dbc58a: '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_phase.svh:1847'
+# 10   0x00001555522d64e9: '<unknown (@0x1555522d64e9)>'
+# 11   0x000015554e2bc1aa: '<unknown (@0x15554e2bc1aa)>'
+# 12   0x000015554df8b4df: '<unknown (@0x15554df8b4df)>'
+# 13   0x000015554e315ad9: '<unknown (@0x15554e315ad9)>'
+# 14   0x000015554e9999b8: '<unknown (@0x15554e9999b8)>'
+# --> START OF USERCODE
+# 15   0x000015554e7218cf: 'mti_Run + 0x00000000000000bf' in '/eda/SolidoSimulationSuite/solidosim/solidosim/qforams/v2025.3_2/linux_x86_64/libvsimnotcl.so'
+# <-- END OF USERCODE
+# 16   0x0000000000b6a19a: '<unknown (@0xb6a19a)>'
+# 17   0x0000000000b6d36b: '<unknown (@0xb6d36b)>'
+# 18   0x0000000000b715b5: '<unknown (@0xb715b5)>'
+# 19   0x0000000000b418cf: '<unknown (@0xb418cf)>'
+# 20   0x0000000001ec315a: '<unknown (@0x1ec315a)>'
+# 21   0x0000000002b3fd06: '<unknown (@0x2b3fd06)>'
+# 22   0x0000000002b409a8: '<unknown (@0x2b409a8)>'
+# 23   0x0000000002b40d06: '<unknown (@0x2b40d06)>'
+# 24   0x000015554efc4303: '<unknown (@0x15554efc4303)>'
+# 25   0x0000000002bdfac0: '<unknown (@0x2bdfac0)>'
+# 26   0x0000000002c341d1: '<unknown (@0x2c341d1)>'
+# 27   0x0000000002bf7f1d: '<unknown (@0x2bf7f1d)>'
+# 28   0x0000000002bf8251: '<unknown (@0x2bf8251)>'
+# 29   0x0000000001ef9472: '<unknown (@0x1ef9472)>'
+# 30   0x0000000001ef2999: '<unknown (@0x1ef2999)>'
+# 31   0x0000000001ee960b: '<unknown (@0x1ee960b)>'
+# 32   0x0000000000b3d18c: '<unknown (@0xb3d18c)>'
+# 33   0x0000000000ae8689: '<unknown (@0xae8689)>'
+# 34   0x00000000011b996e: '<unknown (@0x11b996e)>'
+# 35   0x0000000000a4d6f6: '<unknown (@0xa4d6f6)>'
+# 36   0x0000155541e3a865: '__libc_start_main + 0x00000000000000e5' in '/lib64/libc.so.6'
+# End of Stack Trace
+
+

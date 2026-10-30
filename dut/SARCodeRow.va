@@ -1,0 +1,32 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+// Structural lower row of IdealSARLogic.  Control names correspond to the
+// extracted-netlist nodes; I18 creates the distinct final clock for b0.
+module SARCodeRow(
+    In, sample_clk, net32, net42, net47, net51, net60, net72, net75, net84,
+    register_clk, VDD, VSS, b7, b6, b5, b4, b3, b2, b1, b0,
+    b7b, b6b, b5b, b4b, b3b, b2b, b1b, b0b
+);
+    input In, sample_clk;
+    input net32, net42, net47, net51, net60, net72, net75, net84;
+    input register_clk, VDD, VSS;
+    output b7, b6, b5, b4, b3, b2, b1, b0;
+    output b7b, b6b, b5b, b4b, b3b, b2b, b1b, b0b;
+    electrical In, sample_clk;
+    electrical net32, net42, net47, net51, net60, net72, net75, net84;
+    electrical register_clk, VDD, VSS;
+    electrical b7, b6, b5, b4, b3, b2, b1, b0;
+    electrical b7b, b6b, b5b, b4b, b3b, b2b, b1b, b0b;
+    electrical net162, net162_qbar;
+
+    IdealFlipFlop I10 (.Set(net32), .Reset(sample_clk), .D(In), .Q(b7), .QBAR(b7b), .CLK(b6), .VDD(VDD), .VSS(VSS));
+    IdealFlipFlop I11 (.Set(net42), .Reset(sample_clk), .D(In), .Q(b6), .QBAR(b6b), .CLK(b5), .VDD(VDD), .VSS(VSS));
+    IdealFlipFlop I12 (.Set(net47), .Reset(sample_clk), .D(In), .Q(b5), .QBAR(b5b), .CLK(b4), .VDD(VDD), .VSS(VSS));
+    IdealFlipFlop I13 (.Set(net51), .Reset(sample_clk), .D(In), .Q(b4), .QBAR(b4b), .CLK(b3), .VDD(VDD), .VSS(VSS));
+    IdealFlipFlop I14 (.Set(net60), .Reset(sample_clk), .D(In), .Q(b3), .QBAR(b3b), .CLK(b2), .VDD(VDD), .VSS(VSS));
+    IdealFlipFlop I15 (.Set(net72), .Reset(sample_clk), .D(In), .Q(b2), .QBAR(b2b), .CLK(b1), .VDD(VDD), .VSS(VSS));
+    IdealFlipFlop I16 (.Set(net75), .Reset(sample_clk), .D(In), .Q(b1), .QBAR(b1b), .CLK(b0), .VDD(VDD), .VSS(VSS));
+    IdealFlipFlop I17 (.Set(net84), .Reset(sample_clk), .D(In), .Q(b0), .QBAR(b0b), .CLK(net162), .VDD(VDD), .VSS(VSS));
+    IdealFlipFlop I18 (.Set(register_clk), .Reset(sample_clk), .D(VSS), .Q(net162), .QBAR(net162_qbar), .CLK(VSS), .VDD(VDD), .VSS(VSS));
+endmodule

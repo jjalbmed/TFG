@@ -44,8 +44,7 @@ class adc_ff_test extends adc_base_test;
 
             `uvm_error(
                 "FF_TEST",
-                $sformatf(
-                    "%s: Q=%0.6f V QBAR=%0.6f V, expected Q=%0.6f V QBAR=%0.6f V",
+                $sformatf("%s: Q=%0.6f V QBAR=%0.6f V, expected Q=%0.6f V QBAR=%0.6f V",
                     case_name,
                     actual_q,
                     actual_qbar,
@@ -57,10 +56,7 @@ class adc_ff_test extends adc_base_test;
         end
         else begin
 
-            `uvm_info(
-                "FF_TEST",
-                $sformatf(
-                    "%s: Q=%0.6f V QBAR=%0.6f V",
+            `uvm_info("FF_TEST", $sformatf("%s: Q=%0.6f V QBAR=%0.6f V",
                     case_name,
                     actual_q,
                     actual_qbar
@@ -89,11 +85,7 @@ class adc_ff_test extends adc_base_test;
 
         @(posedge env.agent.driver.vif.clk);
 
-        check_ff(
-            "CASE 1: Reset=1",
-            0.0,
-            1.0
-        );
+        check_ff("CASE 1: Reset=1",0.0,1.0);
 
 
         // ---------------------------------------------------------
@@ -105,11 +97,7 @@ class adc_ff_test extends adc_base_test;
 
         drive_ff(1.8, 0.0, 0.0);
 
-        check_ff(
-            "CASE 2: Set=1",
-            1.0,
-            0.0
-        );
+        check_ff("CASE 2: Set=1", 1.0, 0.0);
 
 
         // ---------------------------------------------------------
@@ -120,11 +108,7 @@ class adc_ff_test extends adc_base_test;
 
         drive_ff(1.8, 1.8, 0.0);
 
-        check_ff(
-            "CASE 3: Set=1 Reset=1 -> Set priority",
-            1.0,
-            0.0
-        );
+        check_ff("CASE 3: Set=1 Reset=1 -> Set priority",1.0,0.0);
 
 
         // ---------------------------------------------------------
@@ -140,19 +124,11 @@ class adc_ff_test extends adc_base_test;
 
         drive_ff(0.0, 0.0, 0.0);
 
-        check_ff(
-            "CASE 4A: D=0 before rising edge -> Q must hold",
-            1.0,
-            0.0
-        );
+        check_ff("CASE 4A: D=0 before rising edge -> Q must hold",1.0,0.0);
 
         @(posedge env.agent.driver.vif.clk);
 
-        check_ff(
-            "CASE 4B: D=0 after rising edge",
-            0.0,
-            1.0
-        );
+        check_ff("CASE 4B: D=0 after rising edge",0.0,1.0);
 
 
         // ---------------------------------------------------------
@@ -192,12 +168,7 @@ class adc_ff_test extends adc_base_test;
 
         drive_ff(0.0, 1.8, 1.8);
 
-        check_ff(
-            "CASE 6: Async Reset between clock edges",
-            0.0,
-            1.0
-        );
-
+        check_ff("CASE 6: Async Reset between clock edges", 0.0, 1.0);
 
         // ---------------------------------------------------------
         // CASE 7
@@ -208,12 +179,7 @@ class adc_ff_test extends adc_base_test;
 
         drive_ff(1.8, 0.0, 0.0);
 
-        check_ff(
-            "CASE 7: Async Set between clock edges",
-            1.0,
-            0.0
-        );
-
+        check_ff("CASE 7: Async Set between clock edges",1.0,0.0);
 
         phase.drop_objection(this);
 

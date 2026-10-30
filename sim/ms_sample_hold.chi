@@ -11,18 +11,18 @@
     Hyper-Threading Technology        : enabled
     Number of cpu cores               : 6
     Number of logical processors      : 12
-*** Freq  : 2495.999MHz
+*** Freq  : 2495.998MHz
 *** Cache : 12288 KB
-*** MEM   : 8016524 kB
-*** Date  : Fri Oct  2 20:11:58 2026
+*** MEM   : 8016520 kB
+*** Date  : Fri Oct 30 15:11:23 2026
 
 *** Questa-ADMS VERSION : ELDO 2026.1 update1 (64 bits) Thu Mar 12 16:20:50 GMT 2026
 
-/eda/SolidoSimulationSuite/solidosim/solidosim/aol/bin/vams_ms_64 -i /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd -noconf -nogwl -cou46 -gwl wdl -nocou -wdb_folder -wdb_incremental -jwdb_design -float -hdla /home/jalberic/proyectos/TFG/work test_fixture -hdlav3opt -jwdbport 35059 -jwdbhost JOSE -folder -c -mach +UVM_TESTNAME=adc_sar_sequence_row_test -libtop /home/jalberic/proyectos/TFG/work -jwdb_checkpoint 1 -msl transcript_ms
+/eda/SolidoSimulationSuite/solidosim/solidosim/aol/bin/vams_ms_64 -i /home/jalberic/proyectos/TFG/sim/ms_sample_hold.cmd -noconf -nogwl -cou46 -gwl wdl -nocou -wdb_folder -wdb_incremental -jwdb_design -float -hdla /home/jalberic/proyectos/TFG/work test_fixture -hdlav3opt -jwdbport 33657 -jwdbhost JOSE -folder -c -mach -coverage +UVM_TESTNAME=adc_sh_sine_test -libtop /home/jalberic/proyectos/TFG/work -jwdb_checkpoint 1 -msl transcript_ms
 
 
 ***** PRE-PROCESSING ...
-1******* 2-Oct-26 *******  ELDO 2026.1 update1 (64 bits)  (v26.1_1.1)  *******20:11:58******
+1*******30-Oct-26 *******  ELDO 2026.1 update1 (64 bits)  (v26.1_1.1)  *******15:11:23******
 
 0* Boundary elements REAL <-> electrical
 
@@ -31,13 +31,13 @@
 0***********************************************************************
     2  
     3  .MODEL A2D_REAL A2D MODE=REAL
-    4  .MODEL D2A_REAL D2A MODE=REAL
+    4  .MODEL D2A_REAL D2A MODE=REAL TRISE=1P TFALL=1P
     5  
     6  .DEFHOOK a2d_real d2a_real
     7  
     8  .PROBE TRAN V
     9  
-   10  .tran 500ps 1us
+   10  .tran 500ps 600us
    11  .END
 
 End of file 
@@ -49,27 +49,23 @@ End of file
 
 ***** GENERATION ...
 
-Warning 233: In file "./sim/ms_sample_hold.cmd" line 4:
-+   OBJECT "D2A_REAL":  TRISE is not specified. Default value (50 ps) is taken.
-Warning 233: In file "./sim/ms_sample_hold.cmd" line 4:
-+   OBJECT "D2A_REAL":  TFALL is not specified. Default value (50 ps) is taken.
 
 ***** 0  error(s). 
-***** 2  warning(s). 
+***** 0  warning(s). 
 
 
 INFORMATION ABOUT COMPILATION 
 
-Peak memory usage (MB): 132
+Peak memory usage (MB): 133
 Virtual memory usage (MB): 749
-24 elements
-75 nodes 
-34 input signals
+33 elements
+69 nodes 
+9 input signals
 1 functional instances
 Detail about objects and nodes found in the design, and simulated by Eldo:
-Number of nodes                     75
+Number of nodes                     69
 Number of intrinsic nodes           0
-Number of input signals             34
+Number of input signals             9
 Number of resistors                 0
 Number of floating capacitors       0
 Number of grounded capacitors       0
@@ -83,9 +79,9 @@ Number of JFET                      0
 Number of MOS                       0
 Number of SWITCHES                  0
 Number of transmission lines        0
-ADMS devices                        24
-Total number of elements simulated  24
-*** DATE:  2-Oct-2026 20:12:02
+ADMS devices                        33
+Total number of elements simulated  33
+*** DATE: 30-Oct-2026 15:11:28
 *** TITLE: * Boundary elements REAL <-> electrical
 
 TEMPERATURE : 27.000000 degrees C
@@ -93,7 +89,7 @@ TEMPERATURE : 27.000000 degrees C
 
 
 
-1*************** 2-Oct-2026 ***********************  ELDO 2026.1 update1 (64 bits)  (v26.1_1.1)  ***********************20:12:02*****************
+1***************30-Oct-2026 ***********************  ELDO 2026.1 update1 (64 bits)  (v26.1_1.1)  ***********************15:11:28*****************
 
 0* Boundary elements REAL <-> electrical
 0****                 OPTION SUMMARY                                         TEMPERATURE =   27.000 DEG C
@@ -162,13 +158,13 @@ TIMING         = 0        MODWL          = 1        ULOGIC         = 0
 
 
 
-    DC cpu Time 0s 010ms 
+    DC cpu Time 0s 000ms 
 DC:1 iterations FOR DC analysis
 
 
 
 
-1*************** 2-Oct-2026 ***********************  ELDO 2026.1 update1 (64 bits)  (v26.1_1.1)  ***********************20:12:02*****************
+1***************30-Oct-2026 ***********************  ELDO 2026.1 update1 (64 bits)  (v26.1_1.1)  ***********************15:11:28*****************
 
 0* Boundary elements REAL <-> electrical
 0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
@@ -179,90 +175,84 @@ DC:1 iterations FOR DC analysis
   NODE         VOLTAGE    
  ADC_CLK_AMS       0.0       
  ADC_CMP_OUT_AMS       0.0       
- ADC_DAC_B0_AMS       0.0       
- ADC_DAC_B1_AMS       0.0       
- ADC_DAC_B2_AMS       0.0       
- ADC_DAC_B3_AMS       0.0       
- ADC_DAC_B4_AMS       0.0       
- ADC_DAC_B5_AMS       0.0       
- ADC_DAC_B6_AMS       0.0       
- ADC_DAC_B7_AMS       0.0       
  ADC_DAC_OUT_AMS       0.0       
- ADC_FF_D_AMS       0.0       
- ADC_FF_QBAR_AMS       0.0       
- ADC_FF_Q_AMS       0.0       
- ADC_FF_RESET_AMS       0.0       
- ADC_FF_SET_AMS       0.0       
- ADC_SAR_AUTO_REGISTER_CLK_AMS       0.0       
- ADC_SAR_AUTO_SEQ_B0_AMS       0.0       
- ADC_SAR_AUTO_SEQ_B1_AMS       0.0       
- ADC_SAR_AUTO_SEQ_B2_AMS       0.0       
- ADC_SAR_AUTO_SEQ_B3_AMS       0.0       
- ADC_SAR_AUTO_SEQ_B4_AMS       0.0       
- ADC_SAR_AUTO_SEQ_B5_AMS       0.0       
- ADC_SAR_AUTO_SEQ_B6_AMS       0.0       
- ADC_SAR_AUTO_SEQ_B7_AMS       0.0       
- ADC_SAR_B0B_AMS       0.0       
- ADC_SAR_B0_AMS       0.0       
- ADC_SAR_B1B_AMS       0.0       
- ADC_SAR_B1_AMS       0.0       
- ADC_SAR_B2B_AMS       0.0       
- ADC_SAR_B2_AMS       0.0       
- ADC_SAR_B3B_AMS       0.0       
- ADC_SAR_B3_AMS       0.0       
- ADC_SAR_B4B_AMS       0.0       
- ADC_SAR_B4_AMS       0.0       
- ADC_SAR_B5B_AMS       0.0       
- ADC_SAR_B5_AMS       0.0       
- ADC_SAR_B6B_AMS       0.0       
- ADC_SAR_B6_AMS       0.0       
- ADC_SAR_B7B_AMS       0.0       
- ADC_SAR_B7_AMS       0.0       
- ADC_SAR_IN_AMS       0.0       
- ADC_SAR_REGISTER_CLK_AMS       0.0       
- ADC_SAR_RESET_AMS       0.0       
- ADC_SAR_SEQ_B0_AMS       0.0       
- ADC_SAR_SEQ_B1_AMS       0.0       
- ADC_SAR_SEQ_B2_AMS       0.0       
- ADC_SAR_SEQ_B3_AMS       0.0       
- ADC_SAR_SEQ_B4_AMS       0.0       
- ADC_SAR_SEQ_B5_AMS       0.0       
- ADC_SAR_SEQ_B6_AMS       0.0       
- ADC_SAR_SEQ_B7_AMS       0.0       
- ADC_SAR_SEQ_CLK_AMS       0.0       
- ADC_SAR_SEQ_RESET_AMS       0.0       
+ ADC_SARR_O0_AMS       0.0       
+ ADC_SARR_O1_AMS       0.0       
+ ADC_SARR_O2_AMS       0.0       
+ ADC_SARR_O3_AMS       0.0       
+ ADC_SARR_O4_AMS       0.0       
+ ADC_SARR_O5_AMS       0.0       
+ ADC_SARR_O6_AMS       0.0       
+ ADC_SARR_O7_AMS       0.0       
+ ADC_SAR_LOGIC_B0_AMS       0.0       
+ ADC_SAR_LOGIC_B1_AMS       0.0       
+ ADC_SAR_LOGIC_B2_AMS       0.0       
+ ADC_SAR_LOGIC_B3_AMS       0.0       
+ ADC_SAR_LOGIC_B4_AMS       0.0       
+ ADC_SAR_LOGIC_B5_AMS       0.0       
+ ADC_SAR_LOGIC_B6_AMS       0.0       
+ ADC_SAR_LOGIC_B7_AMS       0.0       
+ ADC_SAR_LOGIC_REGISTER_CLK_AMS       0.0       
+ ADC_SAR_LOGIC_SAMPLE_CLK_AMS       0.0       
  ADC_VIN_AMS       0.0       
+ ADC_VOUT_AMS       0.0       
  DUT.DAC_VDD       0.0       
  DUT.DAC_VSS       0.0       
- DUT.FF_VDD       0.0       
- DUT.FF_VSS       0.0       
- DUT.SAR_SEQ_VDD       0.0       
- DUT.SAR_SEQ_VSS       0.0       
- DUT.SAR_VDD       0.0       
- DUT.SAR_VSS       0.0       
+ DUT.SARR_CLK       0.0       
+ DUT.SARR_VDD       0.0       
+ DUT.SARR_VSS       0.0       
+ DUT.SAR_LOGIC_VDD       0.0       
+ DUT.SAR_LOGIC_VSS       0.0       
  DUT.SH_VOUT       0.0       
- DUT.U_SAR_SEQUENCE_ROW.REGISTER_CLK_QBAR       0.0       
- DUT.U_SAR_SEQUENCE_ROW.SEQ_B0_QBAR       0.0       
- DUT.U_SAR_SEQUENCE_ROW.SEQ_B1_QBAR       0.0       
- DUT.U_SAR_SEQUENCE_ROW.SEQ_B2_QBAR       0.0       
- DUT.U_SAR_SEQUENCE_ROW.SEQ_B3_QBAR       0.0       
- DUT.U_SAR_SEQUENCE_ROW.SEQ_B4_QBAR       0.0       
- DUT.U_SAR_SEQUENCE_ROW.SEQ_B5_QBAR       0.0       
- DUT.U_SAR_SEQUENCE_ROW.SEQ_B6_QBAR       0.0       
- DUT.U_SAR_SEQUENCE_ROW.SEQ_B7_QBAR       0.0       
- DUT.U_SAR_SEQUENCE_ROW.START_Q       0.0       
- DUT.U_SAR_SEQUENCE_ROW.START_QBAR       0.0       
+ DUT.U_SARR.O0B       0.0       
+ DUT.U_SARR.O1B       0.0       
+ DUT.U_SARR.O2B       0.0       
+ DUT.U_SARR.O3B       0.0       
+ DUT.U_SARR.O4B       0.0       
+ DUT.U_SARR.O5B       0.0       
+ DUT.U_SARR.O6B       0.0       
+ DUT.U_SARR.O7B       0.0       
+ DUT.U_SAR_LOGIC.NET10       0.0       
+ DUT.U_SAR_LOGIC.NET100       0.0       
+ DUT.U_SAR_LOGIC.NET108       0.0       
+ DUT.U_SAR_LOGIC.NET116       0.0       
+ DUT.U_SAR_LOGIC.NET124       0.0       
+ DUT.U_SAR_LOGIC.NET132       0.0       
+ DUT.U_SAR_LOGIC.NET142       0.0       
+ DUT.U_SAR_LOGIC.NET149       0.0       
+ DUT.U_SAR_LOGIC.NET156       0.0       
+ DUT.U_SAR_LOGIC.NET162       0.0       
+ DUT.U_SAR_LOGIC.NET163       0.0       
+ DUT.U_SAR_LOGIC.NET170       0.0       
+ DUT.U_SAR_LOGIC.NET177       0.0       
+ DUT.U_SAR_LOGIC.NET2       0.0       
+ DUT.U_SAR_LOGIC.NET31       0.0       
+ DUT.U_SAR_LOGIC.NET32       0.0       
+ DUT.U_SAR_LOGIC.NET40       0.0       
+ DUT.U_SAR_LOGIC.NET42       0.0       
+ DUT.U_SAR_LOGIC.NET47       0.0       
+ DUT.U_SAR_LOGIC.NET5       0.0       
+ DUT.U_SAR_LOGIC.NET50       0.0       
+ DUT.U_SAR_LOGIC.NET51       0.0       
+ DUT.U_SAR_LOGIC.NET59       0.0       
+ DUT.U_SAR_LOGIC.NET60       0.0       
+ DUT.U_SAR_LOGIC.NET72       0.0       
+ DUT.U_SAR_LOGIC.NET74       0.0       
+ DUT.U_SAR_LOGIC.NET75       0.0       
+ DUT.U_SAR_LOGIC.NET83       0.0       
+ DUT.U_SAR_LOGIC.NET84       0.0       
+ DUT.U_SAR_LOGIC.NET92       0.0       
 
 
 
 
     DC cpu Time 0s 010ms 
-DC:2 iterations FOR DC analysis
+DC:4 iterations FOR DC analysis
 
 
 
 
-1*************** 2-Oct-2026 ***********************  ELDO 2026.1 update1 (64 bits)  (v26.1_1.1)  ***********************20:12:02*****************
+1***************30-Oct-2026 ***********************  ELDO 2026.1 update1 (64 bits)  (v26.1_1.1)  ***********************15:11:28*****************
 
 0* Boundary elements REAL <-> electrical
 0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
@@ -273,79 +263,73 @@ DC:2 iterations FOR DC analysis
   NODE         VOLTAGE    
  ADC_CLK_AMS       0.0       
  ADC_CMP_OUT_AMS       0.0       
- ADC_DAC_B0_AMS       0.0       
- ADC_DAC_B1_AMS       0.0       
- ADC_DAC_B2_AMS       0.0       
- ADC_DAC_B3_AMS       0.0       
- ADC_DAC_B4_AMS       0.0       
- ADC_DAC_B5_AMS       0.0       
- ADC_DAC_B6_AMS       0.0       
- ADC_DAC_B7_AMS       0.0       
  ADC_DAC_OUT_AMS       0.0       
- ADC_FF_D_AMS       0.0       
- ADC_FF_QBAR_AMS       0.0       
- ADC_FF_Q_AMS       0.0       
- ADC_FF_RESET_AMS       0.0       
- ADC_FF_SET_AMS       0.0       
- ADC_SAR_AUTO_REGISTER_CLK_AMS       0.0       
- ADC_SAR_AUTO_SEQ_B0_AMS       0.0       
- ADC_SAR_AUTO_SEQ_B1_AMS       0.0       
- ADC_SAR_AUTO_SEQ_B2_AMS       0.0       
- ADC_SAR_AUTO_SEQ_B3_AMS       0.0       
- ADC_SAR_AUTO_SEQ_B4_AMS       0.0       
- ADC_SAR_AUTO_SEQ_B5_AMS       0.0       
- ADC_SAR_AUTO_SEQ_B6_AMS       0.0       
- ADC_SAR_AUTO_SEQ_B7_AMS       0.0       
- ADC_SAR_B0B_AMS       0.0       
- ADC_SAR_B0_AMS       0.0       
- ADC_SAR_B1B_AMS       0.0       
- ADC_SAR_B1_AMS       0.0       
- ADC_SAR_B2B_AMS       0.0       
- ADC_SAR_B2_AMS       0.0       
- ADC_SAR_B3B_AMS       0.0       
- ADC_SAR_B3_AMS       0.0       
- ADC_SAR_B4B_AMS       0.0       
- ADC_SAR_B4_AMS       0.0       
- ADC_SAR_B5B_AMS       0.0       
- ADC_SAR_B5_AMS       0.0       
- ADC_SAR_B6B_AMS       0.0       
- ADC_SAR_B6_AMS       0.0       
- ADC_SAR_B7B_AMS       0.0       
- ADC_SAR_B7_AMS       0.0       
- ADC_SAR_IN_AMS       0.0       
- ADC_SAR_REGISTER_CLK_AMS       0.0       
- ADC_SAR_RESET_AMS       0.0       
- ADC_SAR_SEQ_B0_AMS       0.0       
- ADC_SAR_SEQ_B1_AMS       0.0       
- ADC_SAR_SEQ_B2_AMS       0.0       
- ADC_SAR_SEQ_B3_AMS       0.0       
- ADC_SAR_SEQ_B4_AMS       0.0       
- ADC_SAR_SEQ_B5_AMS       0.0       
- ADC_SAR_SEQ_B6_AMS       0.0       
- ADC_SAR_SEQ_B7_AMS       0.0       
- ADC_SAR_SEQ_CLK_AMS       0.0       
- ADC_SAR_SEQ_RESET_AMS       1.8000E+00
- ADC_VIN_AMS       0.0       
+ ADC_SARR_O0_AMS       0.0       
+ ADC_SARR_O1_AMS       0.0       
+ ADC_SARR_O2_AMS       0.0       
+ ADC_SARR_O3_AMS       0.0       
+ ADC_SARR_O4_AMS       0.0       
+ ADC_SARR_O5_AMS       0.0       
+ ADC_SARR_O6_AMS       0.0       
+ ADC_SARR_O7_AMS       0.0       
+ ADC_SAR_LOGIC_B0_AMS       0.0       
+ ADC_SAR_LOGIC_B1_AMS       0.0       
+ ADC_SAR_LOGIC_B2_AMS       0.0       
+ ADC_SAR_LOGIC_B3_AMS       0.0       
+ ADC_SAR_LOGIC_B4_AMS       0.0       
+ ADC_SAR_LOGIC_B5_AMS       0.0       
+ ADC_SAR_LOGIC_B6_AMS       0.0       
+ ADC_SAR_LOGIC_B7_AMS       0.0       
+ ADC_SAR_LOGIC_REGISTER_CLK_AMS       0.0       
+ ADC_SAR_LOGIC_SAMPLE_CLK_AMS       0.0       
+ ADC_VIN_AMS       1.0000E+00
+ ADC_VOUT_AMS       0.0       
  DUT.DAC_VDD       1.8000E+00
  DUT.DAC_VSS       0.0       
- DUT.FF_VDD       1.8000E+00
- DUT.FF_VSS       0.0       
- DUT.SAR_SEQ_VDD       1.8000E+00
- DUT.SAR_SEQ_VSS       0.0       
- DUT.SAR_VDD       1.8000E+00
- DUT.SAR_VSS       0.0       
+ DUT.SARR_CLK       1.8000E+00
+ DUT.SARR_VDD       1.8000E+00
+ DUT.SARR_VSS       0.0       
+ DUT.SAR_LOGIC_VDD       1.8000E+00
+ DUT.SAR_LOGIC_VSS       0.0       
  DUT.SH_VOUT       0.0       
- DUT.U_SAR_SEQUENCE_ROW.REGISTER_CLK_QBAR       1.0000E+00
- DUT.U_SAR_SEQUENCE_ROW.SEQ_B0_QBAR       1.0000E+00
- DUT.U_SAR_SEQUENCE_ROW.SEQ_B1_QBAR       1.0000E+00
- DUT.U_SAR_SEQUENCE_ROW.SEQ_B2_QBAR       1.0000E+00
- DUT.U_SAR_SEQUENCE_ROW.SEQ_B3_QBAR       1.0000E+00
- DUT.U_SAR_SEQUENCE_ROW.SEQ_B4_QBAR       1.0000E+00
- DUT.U_SAR_SEQUENCE_ROW.SEQ_B5_QBAR       1.0000E+00
- DUT.U_SAR_SEQUENCE_ROW.SEQ_B6_QBAR       1.0000E+00
- DUT.U_SAR_SEQUENCE_ROW.SEQ_B7_QBAR       1.0000E+00
- DUT.U_SAR_SEQUENCE_ROW.START_Q       1.0000E+00
- DUT.U_SAR_SEQUENCE_ROW.START_QBAR       0.0       
+ DUT.U_SARR.O0B       0.0       
+ DUT.U_SARR.O1B       0.0       
+ DUT.U_SARR.O2B       0.0       
+ DUT.U_SARR.O3B       0.0       
+ DUT.U_SARR.O4B       0.0       
+ DUT.U_SARR.O5B       0.0       
+ DUT.U_SARR.O6B       0.0       
+ DUT.U_SARR.O7B       0.0       
+ DUT.U_SAR_LOGIC.NET10       0.0       
+ DUT.U_SAR_LOGIC.NET100       0.0       
+ DUT.U_SAR_LOGIC.NET108       1.0000E+00
+ DUT.U_SAR_LOGIC.NET116       1.0000E+00
+ DUT.U_SAR_LOGIC.NET124       0.0       
+ DUT.U_SAR_LOGIC.NET132       0.0       
+ DUT.U_SAR_LOGIC.NET142       0.0       
+ DUT.U_SAR_LOGIC.NET149       0.0       
+ DUT.U_SAR_LOGIC.NET156       0.0       
+ DUT.U_SAR_LOGIC.NET162       0.0       
+ DUT.U_SAR_LOGIC.NET163       0.0       
+ DUT.U_SAR_LOGIC.NET170       0.0       
+ DUT.U_SAR_LOGIC.NET177       1.0000E+00
+ DUT.U_SAR_LOGIC.NET2       1.0000E+00
+ DUT.U_SAR_LOGIC.NET31       1.0000E+00
+ DUT.U_SAR_LOGIC.NET32       0.0       
+ DUT.U_SAR_LOGIC.NET40       1.0000E+00
+ DUT.U_SAR_LOGIC.NET42       0.0       
+ DUT.U_SAR_LOGIC.NET47       0.0       
+ DUT.U_SAR_LOGIC.NET5       1.8000E+00
+ DUT.U_SAR_LOGIC.NET50       1.0000E+00
+ DUT.U_SAR_LOGIC.NET51       0.0       
+ DUT.U_SAR_LOGIC.NET59       1.0000E+00
+ DUT.U_SAR_LOGIC.NET60       0.0       
+ DUT.U_SAR_LOGIC.NET72       0.0       
+ DUT.U_SAR_LOGIC.NET74       1.0000E+00
+ DUT.U_SAR_LOGIC.NET75       0.0       
+ DUT.U_SAR_LOGIC.NET83       1.0000E+00
+ DUT.U_SAR_LOGIC.NET84       0.0       
+ DUT.U_SAR_LOGIC.NET92       0.0       
 
 
 
@@ -353,10 +337,22 @@ DC:2 iterations FOR DC analysis
 
 Questa-ADMS NEWTON: VNTOL=1.000000e-06 RELTOL=6.111111e-04
 
+Note 129:Time 1.000200e-08: discontinuity detected on node DUT.U_SAR_LOGIC.NET5: may be some 
++    transitions/slew operators are missing in the HDL model SARLOGIC/_WORK, or these operators 
++    are defined with too steep variations.
+Note 129:Time 1.050050e-07: discontinuity detected on node ADC_VOUT_AMS: may be some 
++    transitions/slew operators are missing in the HDL model DAC_CAPACITIVO/_WORK, or these operators 
++    are defined with too steep variations.
+Note 129:Time 1.050090e-07: discontinuity detected on node ADC_DAC_OUT_AMS: may be some 
++    transitions/slew operators are missing in the HDL model COMPARADOR/_WORK, or these operators 
++    are defined with too steep variations.
+Note 129:Time 1.100020e-07: discontinuity detected on node DUT.U_SAR_LOGIC.NET5: may be some 
++    transitions/slew operators are missing in the HDL model IDEALFLIPFLOP/_WORK, or these operators 
++    are defined with too steep variations.
 
 
 
-1*************** 2-Oct-2026 ***********************  ELDO 2026.1 update1 (64 bits)  (v26.1_1.1)  ***********************20:12:02*****************
+1***************30-Oct-2026 ***********************  ELDO 2026.1 update1 (64 bits)  (v26.1_1.1)  ***********************15:11:28*****************
 
 0* Boundary elements REAL <-> electrical
 0****                 ACCOUNTING INFORMATION                                 TEMPERATURE =   27.000 DEG C
@@ -367,9 +363,9 @@ Questa-ADMS NEWTON: VNTOL=1.000000e-06 RELTOL=6.111111e-04
 
 
 
-Number of nodes                     75
+Number of nodes                     69
 Number of intrinsic nodes           0
-Number of input signals             34
+Number of input signals             9
 Number of resistors                 0
 Number of floating capacitors       0
 Number of grounded capacitors       0
@@ -383,25 +379,28 @@ Number of JFET                      0
 Number of MOS                       0
 Number of SWITCHES                  0
 Number of transmission lines        0
-ADMS devices                        24
-Total number of elements simulated  24
-Number of equations                 82
-Number of non-zero terms            82
-Percent Zeros                      98.78
-Number of Newton iterations         337
-Average number of Newton iterations 1.178
-Number of accepted time steps       286
-Number of rejected time steps       21
-      due to LTE                    0
+ADMS devices                        33
+Total number of elements simulated  33
+Number of equations                 120
+Number of non-zero terms            120
+Percent Zeros                      99.17
+Number of Newton iterations         56251
+Average number of Newton iterations 1.258
+Number of accepted time steps       44721
+Number of rejected time steps       8156
+      due to LTE                    22
       due to Newton                 0
 Evaluation of active devices        0
 Virtual memory size (MB)            749
-Peak memory size (MB)      138
-Number of A2D events.............. 18
-Number of D2A events.............. 21
+Peak memory size (MB)      139
+Number of A2D events.............. 1671
+Number of D2A events.............. 8879
 Number of time point rejection due 
-  to 'DIGITAL' solver ..............21
+  to A2D synchronization.......... 134
+  to FAST A2D synchronization.......... 0
+Number of time point rejection due 
+  to 'DIGITAL' solver ..............8000
 Virtual memory size (MB)            749
-Peak memory size (MB)      138
+Peak memory size (MB)      139
 
 Simulation Finished.

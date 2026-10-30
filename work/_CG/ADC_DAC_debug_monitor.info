@@ -1,0 +1,13 @@
+[VERILOG-AMS Module]
+NAME = ADC_DAC_debug_monitor 
+SOURCE = /home/jalberic/proyectos/TFG/dut/ADC_DAC_debug_monitor.vams 
+LINE = 5
+[Generics]
+[Ports]
+(PORT TERMINAL b3 IN electrical)
+(PORT TERMINAL b2 IN electrical)
+(PORT TERMINAL b1 IN electrical)
+(PORT TERMINAL b0 IN electrical)
+(PORT TERMINAL original IN electrical)
+(PORT TERMINAL event_driven IN electrical)
+(PORT TERMINAL trace IN electrical)

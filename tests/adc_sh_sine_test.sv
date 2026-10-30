@@ -7,7 +7,6 @@ class adc_sh_sine_test extends adc_base_test;
         super.new(name, parent);
     endfunction
 
-
     task run_phase(uvm_phase phase);
 
         real pi;
@@ -15,39 +14,72 @@ class adc_sh_sine_test extends adc_base_test;
         real offset;
         real period_ns;
         real t_ns;
-        int n_period;
 
         time step;
+        int n_period;
         int n_steps;
 
         phase.raise_objection(this);
 
-        // Senoide entre -1 V y +1 V
-        pi        = 3.141592653589793;
-        amplitude = 1.0;
-        offset    = 0.0;
+        pi = 3.141592653589793;
 
-        // Clock = 10 ns -> 20 muestras por periodo de senoide
-        period_ns = 200.0;
+        // Senoide entre 0.5 V y 1.5 V
+        amplitude = 0.5;
+        offset    = 1.0;
 
-        // Actualización suficientemente rápida para verla suave
-        step    = 500ps;
+        // Senoide más lenta:
+        // ~20 conversiones SAR por periodo
+        period_ns = 2000.0;
 
-        // Simular dos periodos completos: 400 ns
-        n_period = 5;
-        n_steps = n_period*400;
+        // Actualización de Vin cada 500 ps
+        step = 500ps;
 
-        for (int i = 0; i <= n_steps; i++) begin
+        // Simular 2 periodos completos = 4 us
+        n_period = 2;
 
-            t_ns = i * 0.5;
+        // 2000 ns / 0.5 ns = 4000 pasos por periodo
+        n_steps = n_period * 4000;
 
-            env.agent.driver.vif.vin =
-                offset +
-                amplitude * $sin(2.0 * pi * t_ns / period_ns);
+        // CLK = 10 ns
+        env.agent.driver.vif.clk = 1'b0;
 
-            #(step);
+        fork
 
-        end
+            // -----------------------------
+            // Generador de reloj
+            // -----------------------------
+            begin
+                forever begin
+                    #5ns;
+                    env.agent.driver.vif.clk = 1'b1;
+
+                    #5ns;
+                    env.agent.driver.vif.clk = 1'b0;
+                end
+            end
+
+            // -----------------------------
+            // Generador de senoide
+            // -----------------------------
+            begin
+                for (int i = 0; i <= n_steps; i++) begin
+
+                    t_ns = i * 0.5;
+
+                    env.agent.driver.vif.vin =
+                        offset +
+                        amplitude *
+                        $sin(2.0 * pi * t_ns / period_ns);
+
+                    #(step);
+                end
+            end
+
+        join_any
+
+        disable fork;
+
+        env.agent.driver.vif.clk = 1'b0;
 
         #1ns;
 
